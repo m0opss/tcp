@@ -1,0 +1,127 @@
+
+#nav
+	height: 100px
+#nav .navCategories
+	width: 15%
+	padding: 32px 0px
+	color: #28323C
+#nav .navCategories .navCategoriesContent
+	color: #28323C
+	cursor: pointer
+	width: 150px
+#nav .navCategories .navCategoriesContent .navCategoriesButtonMore
+	display: none
+#nav .navCategories .navCategoriesMobile
+	display: none
+#nav .navCategories img
+	max-height: 24px
+	margin-top: 5px
+	margin-right: 15px
+	margin-left: 4px
+#nav .navCategories p
+	font-size: 24px
+	font-weight: 700
+	font-family: ProximaNova
+	margin-bottom: 0px
+#nav .navSearch
+	padding: 30px 0px
+#nav .navSearch a
+	text-decoration: none
+	position: relative
+	top: -1px
+	left: 30px
+#nav .navSearch input
+	width: 683px
+	height: 40px
+	border: 2px solid #D7E1EB
+	border-radius: 10px
+	padding-left: 30px
+#nav .navSearch button
+	background-color: #28323C
+	border: none
+	width: 40px
+	height: 40px
+	border-top-right-radius: 10px
+	border-bottom-right-radius: 10px
+	position: relative
+	left: -45px
+#nav .navMore
+	padding: 35px 0px
+#nav .navMore ul
+	margin-bottom: 0px
+	list-style: none
+	padding-left: 0px
+#nav .navMore ul li
+	margin-left: 40px
+#nav .navMore ul li a img
+	min-width: 25px
+
+
+
+.navCategoriesBlock
+	opacity: 0
+	position: fixed
+	visibility: hidden
+	padding: 14px
+	width: 50%
+	height: auto
+	top: 0
+	left: 0
+	border-bottom-right-radius: 10px
+	background-color: #fde5d9
+	color: #000
+	box-sizing: border-box
+	box-shadow: 0 1px 10px 0 rgba(39, 13, 31, 0.3)
+	transition: all 0.1s
+	z-index: 12
+.navCategoriesBlock_active
+	transform: scaleX(1) translateX(0)
+	opacity: 1
+	visibility: visible
+
+
+@media (max-width: 1200px)
+	#nav .navCategories p
+		font-size: 18px
+	#nav .navCategories img
+		max-height: 15px
+		margin-right: 9px
+	#nav .navSearch input
+		width: 530px
+
+@media (max-width: 992px)
+	#nav .navCategories
+		display: flex
+		width: 15%
+	#nav .navCategories p
+		display: none
+	#nav .navCategories .navCategoriesMobile
+		display: block
+		cursor: pointer
+		margin-left: 0px
+		margin-top: 0px
+		margin-right: 20px
+		min-height: 25px
+	#nav .navCategories img
+		max-height: 17px
+		margin-right: 6px
+	#nav .navCategories .navCategoriesContent .navCategoriesButtonMore
+		display: block
+	#nav .navSearch input
+		width: 385px
+	#nav .navMore ul li
+		margin-left: 20px
+
+@media (max-width: 768px)
+	#nav .navCategories
+		width: 19%
+	#nav .navSearch
+		position: relative
+	#nav .navSearch input
+		width: 391px
+	#nav .navSearch button
+		position: absolute
+		left: auto
+		right: 0
+	#nav .navMore
+		display: none
