@@ -1,8 +1,8 @@
-#authorization
+#registration
   background: #323C46
   height: 100vh
-  .authorizationItem
-    .authorizationItemForm
+  .registrationItem
+    .registrationItemForm
       position: absolute
       width: 540px
       height: 559px
@@ -19,8 +19,8 @@
         font-size: 24px
         color: #323C46
         margin-bottom: 15px
-      .authorizationItemFormUser
-        margin-bottom: 30px
+      .registrationItemFormUser
+        margin-bottom: 0px
         p
           font-weight: normal
           font-size: 16px
@@ -43,60 +43,44 @@
           border: 1px solid #D7E1EB
           box-sizing: border-box
           border-radius: 8px
-          margin-bottom: 15px
+          margin-bottom: 10px
           width: 300px
           height: 40px
         .flex
-          margin-top: 30px
+          margin-bottom: 10px
           a
             width: 115px
             height: 24px
             font-weight: bold
             font-size: 16px
             color: #73C8EB
-          button
-            padding: 7px 20px 6px
-            background: #323C46
-            border-radius: 8px
-            font-family: "ProximaNova"
-            font-weight: 600
-            font-size: 18px
-            color: #F9F9F9
-            border: none
-            margin-left: 39px
-      .authorizationItemLogInWith
-        margin-top: 35px
-        p
-          width: 205px
-          height: 27px
+          p
+            font-weight: 400
+            font-size: 16px
+            color: #323c46
+            margin-right: 15px
+        button
+          padding: 7px 20px 6px
+          background: #323C46
+          border-radius: 8px
           font-family: "ProximaNova"
           font-weight: 600
           font-size: 18px
-          color: #323C46
-        .flex
-          width: 265px
-          .authorizationItemLogInWithAll
-            justify-content: center
-            align-items: center
-            padding: 7px 20px 6px
-            text-decoration: none
-            border-radius: 8px
-            margin-right: 15px
-            img
-              margin-right: 3px
-          .authorizationItemLogInWithTwitter
-            background: #478ECC
-            color: #fff
-          .authorizationItemLogInWithGoogle
-            background: #fff
-            color: #323C46
-          .authorizationItemLogInWithApple
-            background: #323C46
-            color: #fff
-          .authorizationItemLogInWithFacebook
-            background: #15499F
-            color: #fff
-  .authorizationItem1
+          color: #F9F9F9
+          border: none
+      .registrationItemFormPolicy
+        width: 430px
+        height: 72px
+        font-weight: normal
+        font-size: 16px
+        color: #28323C
+        margin-top: 10px
+        margin-bottom: 0px
+        a
+          font-weight: bold
+          font-size: 16px
+          color: #73C8EB
+  .registrationItem1
     width: 40%
     height: 100vh
     text-align: right
@@ -105,38 +89,24 @@
         width: 240px
         position: relative
         top: 43%
-      .authorizationItem1Mobile
+      .registrationItem1Mobile
         display: none
-  .authorizationItem2
+  .registrationItem2
     width: 60%
 
 @media (max-width: 992px)
-  #authorization
+  #registration
     .flex-mobile
       display: block
-    .authorizationItem
-      .authorizationItemForm
+    .registrationItem
+      .registrationItemForm
         width: 510px
         height: 584px
         left: calc(50% - 510px/2)
         top: calc(50% - 584px/2)
-        .authorizationItemFormUser
+        .registrationItemFormUser
           margin-bottom: 10px
-        .authorizationItemLogInWith
-          .flex
-            width: 300px
-            .authorizationItemLogInWithAll
-              display: block
-              margin-bottom: 15px
-            .authorizationItemLogInWithTwitter
-              width: 119px
-            .authorizationItemLogInWithGoogle
-              width: 122px
-            .authorizationItemLogInWithApple
-              width: 111px
-            .authorizationItemLogInWithFacebook
-              width: 143px
-    .authorizationItem1
+    .registrationItem1
       width: auto
       height: auto
       text-align: center
@@ -147,25 +117,28 @@
           height: 56px
           left: calc(50% - 130px/2)
           top: calc(50% - 56px/2 - 360px)
-    .authorizationItem2
+    .registrationItem2
       width: auto
 
 @media (max-width: 768px)
-  #authorization
+  #registration
     background: #f9f9f9
-    .authorizationItem
-      .authorizationItemForm
+    .registrationItem
+      .registrationItemForm
         width: 350px
         padding: 0px
         left: calc(50% - 350px/2)
         top: calc(50% - 480px/2)
         background: transparent
         border-radius: 0px
-    .authorizationItem1
+        .registrationItemFormPolicy
+          width: 345px
+          height: 100px
+    .registrationItem1
       a
-        .authorizationItem1Desktop
+        .registrationItem1Desktop
           display: none
-        .authorizationItem1Mobile
+        .registrationItem1Mobile
           display: block
           width: 130px
           height: 56px

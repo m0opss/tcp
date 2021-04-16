@@ -1,0 +1,116 @@
+#restoringAccess
+  background: #323C46
+  height: 100vh
+  .restoringAccessItem
+    .restoringAccessItemForm
+      position: absolute
+      width: 540px
+      height: 364px
+      left: calc(50% - 540px/2 + 190px)
+      top: calc(50% - 364px/2)
+      background: #FFFFFF
+      border-radius: 25px
+      padding: 30px
+      h3
+        width: 290px
+        height: 36px
+        font-family: "ProximaNova"
+        font-weight: 600
+        font-size: 24px
+        color: #323C46
+        margin-bottom: 15px
+      p
+        span
+          font-weight: bold
+      form
+        input
+          background: #F9F9F9
+          border: 1px solid #D7E1EB
+          box-sizing: border-box
+          border-radius: 8px
+          margin-top: 20px
+          margin-bottom: 10px
+          width: 36px
+          height: 36px
+          margin-right: 15px
+        .flex
+          margin-bottom: 10px
+          a
+            width: 150px
+            height: 24px
+            font-weight: bold
+            font-size: 16px
+            color: #73C8EB
+          p
+            font-weight: 400
+            font-size: 16px
+            color: #323c46
+            margin-right: 15px
+      .restoringAccessItemFormLink
+        font-weight: bold
+        font-size: 16px
+        color: #73C8EB
+        display: block
+        margin-bottom: 15px
+  .restoringAccessItem1
+    width: 40%
+    height: 100vh
+    text-align: right
+    a
+      img
+        width: 240px
+        position: relative
+        top: 43%
+  .restoringAccessItem2
+    width: 60%
+
+@media (max-width: 992px)
+  #restoringAccess
+    .flex-mobile
+      display: block
+    .restoringAccessItem
+      .restoringAccessItemForm
+        width: 510px
+        height: 386px
+        left: calc(50% - 510px/2)
+        top: calc(50% - 584px/2)
+        .restoringAccessItemFormUser
+          margin-bottom: 10px
+    .restoringAccessItem1
+      width: auto
+      height: auto
+      text-align: center
+      a
+        img
+          position: absolute
+          max-width: 130px
+          height: 56px
+          left: calc(50% - 130px/2)
+          top: calc(50% - 56px/2 - 360px)
+    .restoringAccessItem2
+      width: auto
+
+@media (max-width: 768px)
+  #restoringAccess
+    background: #f9f9f9
+    .restoringAccessItem
+      .restoringAccessItemForm
+        width: 350px
+        padding: 0px
+        left: calc(50% - 350px/2)
+        top: calc(50% - 480px/2)
+        background: transparent
+        border-radius: 0px
+        .restoringAccessItemFormPolicy
+          width: 345px
+          height: 100px
+    .restoringAccessItem1
+      a
+        .restoringAccessItem1Desktop
+          display: none
+        .restoringAccessItem1Mobile
+          display: block
+          width: 130px
+          height: 56px
+          left: calc(50% - 130px/2)
+          top: calc(50% - 56px/2 - 320px)

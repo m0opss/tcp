@@ -23,8 +23,7 @@ const Login = ({}) => {
                 <h3>Авторизация</h3>
                 <div className={`${styles.authorizationItemFormUser} flex`}>
                   <p>Новый пользователь?</p>
-                  <A href="#">Создайте учетную запись</A>
-
+                  <A href="/registration">Создайте учетную запись</A>
                 </div>
                 <form action="#">
                   <p>Email</p>
@@ -32,7 +31,7 @@ const Login = ({}) => {
                   <p>Пароль</p>
                   <input type="mail" />
                   <div className={`${styles.flex} flex`}>
-                    <a href="#">Забыли пароль?</a>
+                    <A href="/restoringAccess">Забыли пароль?</A>
                     <button>Продолжить</button>
                   </div>
                 </form>
