@@ -58,7 +58,14 @@ const Popular = ({ items }) => {
     <>
       <div id={`${styles.popular}`}>
         <div className="container">
-          <h2>Популярные Товары и услуги</h2>
+          <h2>
+            Популярные{" "}
+            <a href="#">
+              <span>Товары и услуги</span>{" "}
+              <img src="img/dropdownPopular.svg" alt="" />
+            </a>
+          </h2>
+
           <div className={`${styles.productItems} flex`}>
             {items.map((item) => (
               <ProductItem

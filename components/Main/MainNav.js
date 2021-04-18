@@ -37,19 +37,19 @@ const MainNav = ({}) => {
             <div className={`${styles.navMore}`}>
               <ul className="flex">
                 <li>
-                  <a href="#">
+                  <A href="/cart">
                     <img src="img/cart.svg" alt="" />
-                  </a>
+                  </A>
                 </li>
                 <li>
-                  <a href="#">
+                  <A href="/favorites">
                     <img src="img/bookmark.svg" alt="" />
-                  </a>
+                  </A>
                 </li>
                 <li>
-                  <a href="#">
+                  <A href="/compare">
                     <img src="img/compare-scales.svg" alt="" />
-                  </a>
+                  </A>
                 </li>
               </ul>
             </div>

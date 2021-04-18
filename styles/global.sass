@@ -316,25 +316,15 @@ input:required:valid,
 textarea:required:valid
 	border-color: green
 
-::placeholder
-	color: #666
-
-::selection
-	background-color: $accent
-	color: #fff
-
-input, textarea
-	outline: none
-	&:focus:required:invalid
-		border-color: red
-	&:required:valid
-		border-color: green
-
 body
-	margin: 0px
-	font-family: 'PT Sans', sans-serif
+	margin: 0
+	font-family: "PT Sans", sans-serif
+
 .flex
+	display: -webkit-box
+	display: -ms-flexbox
 	display: flex
+
 .container
 	max-width: 1140px
 	margin: auto

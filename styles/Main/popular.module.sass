@@ -6,116 +6,131 @@
     font-weight: 600
     font-size: 24px
     color: #28323C
-  .productItems
-    flex-wrap: wrap
-    margin-left: -15px
-    .productItem
-      position: relative
-      width: 345px
-      height: 476px
-      background: #FFFFFF
-      border: 0.5px solid #D7E1EB
-      box-sizing: border-box
-      box-shadow: 0px 51px 104px rgba(215, 225, 235, 0.1), 0px 35.3283px 66.0385px rgba(215, 225, 235, 0.0787172), 0px 23.0466px 39.7201px rgba(215, 225, 235, 0.0644315), 0px 13.7983px 22.6799px rgba(215, 225, 235, 0.054344), 0px 7.22624px 12.5528px rgba(215, 225, 235, 0.045656), 0px 2.97376px 6.97376px rgba(215, 225, 235, 0.0355685), 0px 0.683965px 3.57784px rgba(215, 225, 235, 0.0212828)
-      border-radius: 15px
-      margin: 15px
-      padding: 30px
-      text-align: left
-      &:hover
-        .productItemBuyBlock
-          opacity: 1
-      a
-        text-decoration: none
-        color: #28323C
-        img
-          margin: 48px 10px
-        h3
-          font-size: 16px
-          margin-top: 15px
-          margin-bottom: 0px
-      .productItemCatalogBut
-        margin-top: 35px
-        display: block
-        font-size: 12px
+    a
+      span
+        border-bottom: 1px solid #73879B
+        font-family: "ProximaNova"
+        font-weight: 600
+        font-size: 24px
         color: #73879B
+        text-decoration: none
+
+.productItems
+  flex-wrap: wrap
+  margin-left: -15px
+  .productItem
+    position: relative
+    width: 345px
+    height: 476px
+    background: #FFFFFF
+    box-shadow: 0px 20px 25px rgba(215, 225, 235, 0.15), 0px 15px 20px rgba(215, 225, 235, 0.1), 0px 10px 15px rgba(215, 225, 235, 0.07), 0px 5px 5px rgba(215, 225, 235, 0.05)
+    border-radius: 15px
+    margin: 15px
+    padding: 30px
+    text-align: left
+    &:hover
       .productItemBuyBlock
-        opacity: 0
-        position: absolute
-        width: 344px
-        height: 156px
-        left: 0px
-        top: 320px
-        background: #323C46
-        border-radius: 0px 0px 15px 15px
-        transition: all .2s ease
-        h4
-          width: 290px
-          height: 48px
-          font-weight: normal
-          font-size: 16px
-          line-height: 150%
-          color: #F9F9F9
-          margin: 10px auto
-        .productItemBuyBlockLink
-          width: 121px
-          height: 18px
-          font-weight: normal
-          font-size: 12px
-          color: #D7E1EB
-          flex: none
-          margin: 10px 0px
-          margin-left: 30px
-          display: block
-        ul
-          list-style: none
-          padding-left: 0px
-          text-align: center
-          li
-            width: 120px
-            margin-left: 20px
-            margin-top: 14px
-            img
-              max-width: 10px
-            a
-              height: 18px
-              font-weight: normal
-              font-size: 13px
-              color: #FFFFFF
-              margin: 0px 5px
-          .productItemBuyBlockButton
-            img
-              max-width: 15px
-            a
-              font-size: 14px
-              font-weight: 700
-      .productItemPrice
-        margin-top: 26px
-        font-size: 20px
-        color: #323C46
-        .productItemPriceCurrency
+        opacity: 1
+      ul img
+        margin: 0
+    a
+      text-decoration: none
+      color: #28323C
+      img
+        margin: 48px 10px
+      h3
+        font-size: 16px
+        margin-top: 15px
+        margin-bottom: 0px
+    .productItemCatalogBut
+      margin-top: 35px
+      display: block
+      font-size: 12px
+      color: #73879B
+    .productItemBuyBlock
+      opacity: 0
+      position: absolute
+      width: 344px
+      height: 156px
+      left: 0px
+      top: 320px
+      background: #323C46
+      border-radius: 0px 0px 15px 15px
+      transition: all .2s ease
+      h4
+        width: 290px
+        height: 48px
+        font-weight: normal
+        font-size: 16px
+        line-height: 150%
+        color: #F9F9F9
+        margin: 10px auto
+      .productItemBuyBlockLink
+        width: 121px
+        height: 18px
+        font-weight: normal
+        font-size: 12px
+        color: #D7E1EB
+        flex: none
+        margin: 10px 0px
+        margin-left: 30px
+        display: block
+      ul
+        list-style: none
+        padding-left: 0px
+        text-align: center
+        li
+          width: 120px
+          margin-left: 20px
+          margin-top: 14px
+          img
+            max-width: 10px
+          a
+            height: 18px
+            font-weight: normal
+            font-size: 13px
+            color: #FFFFFF
+            margin: 0px 5px
+        .productItemBuyBlockButton
+          img
+            max-width: 15px
+          a
+            font-size: 14px
+            font-weight: 700
+    .productItemPrice
+      margin-top: 26px
+      font-size: 20px
+      color: #323C46
+      .productItemPriceCurrency
+        margin-top: 3px
+        height: 25px
+        width: 50%
+        img
           margin-top: 3px
           height: 25px
-          width: 50%
-          img
-            margin-top: 3px
-            height: 25px
-        .productItemPriceCryptocurrency
-          width: 50%
-          justify-content: flex-end
-          img
-            margin-top: 3px
-            height: 25px
-      .productItemMore
-        text-align: center
-        margin-top: 41%
-        img
-          margin: 20px 0px
         p
           font-family: "ProximaNova"
-          font-weight: 600
-          font-size: 24px
-          color: #73879B
-          margin-bottom: 0px
+          font-weight: 700
+      .productItemPriceCryptocurrency
+        width: 50%
+        justify-content: flex-end
+        img
+          margin-top: 3px
+          height: 25px
+        p
+          font-family: "ProximaNova"
+          font-weight: 700
+    .productItemMore
+      text-align: center
+      margin-top: 41%
+      img
+        margin: 20px 0px
+      p
+        font-family: "ProximaNova"
+        font-weight: 600
+        font-size: 24px
+        color: #73879B
+        margin-bottom: 0px
 
 @media (max-width: 1200px)
   #popular .productItems .productItem
