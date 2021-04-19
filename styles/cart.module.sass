@@ -1,0 +1,120 @@
+.navCategoriesBlock
+  opacity: 0
+  position: absolute
+  visibility: hidden
+  padding: 30px 15px
+  width: 1140px
+  height: auto
+  top: 66px
+  right: auto
+  left: auto
+  background-color: #F9F9F9
+  color: #000
+  box-shadow: 0px 5px 5px rgba(215, 225, 235, 0.1), 0px 10px 15px rgba(215, 225, 235, 0.1), 0px 15px 20px rgba(215, 225, 235, 0.2), 0px 20px 25px rgba(215, 225, 235, 0.25)
+  border-radius: 0px 0px 15px 15px
+  transition: all 0.1s
+  z-index: 12
+  .navCategoriesBlockMobile
+    display: none
+    text-align: center
+    a
+      display: inline-grid
+      text-decoration: none
+      margin: 15px
+      img
+        margin: auto
+        margin-bottom: 29px
+      p
+        font-family: "ProximaNova"
+        font-weight: 600
+        font-size: 18px
+        text-align: center
+        color: #28323C
+        width: 140px
+  .navCategoriesBlockList
+    ul
+      list-style: none
+      padding-left: 0px
+      margin-bottom: 0px
+      li
+        margin-bottom: 5px
+        a
+          text-decoration: none
+          font-size: 16px
+          color: #323c46
+        .navCategoriesBlockListArrow
+          margin-left: 70px
+  .navCategoriesBlockPopularCategories
+    margin-left: 95px
+    h3
+      font-family: "ProximaNova"
+      font-weight: 600
+      font-size: 18px
+      color: #28323C
+      margin-bottom: 10px
+    ul
+      list-style: none
+      padding-left: 0px
+      margin-bottom: 30px
+      li
+        margin-bottom: 8.5px
+        a
+          font-weight: normal
+          font-size: 16px
+          color: #73879B
+          text-decoration: none
+.navCategoriesBlock_active
+  transform: scaleX(1) translateX(0)
+  opacity: 1
+  visibility: visible
+
+.menuMobileBlock
+  opacity: 0
+  position: fixed
+  visibility: hidden
+  padding: 14px
+  width: auto
+  height: auto
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  border-bottom-left-radius: 20px
+  background-color: #f5f5f5
+  color: #28323C
+  box-sizing: border-box
+  box-shadow: 0 1px 10px 0 rgba(39, 13, 31, 0.3)
+  transition: all 0.1s
+  z-index: 12
+.menuMobileBlock_active
+  transform: scaleX(1) translateX(0)
+  opacity: 1
+  visibility: visible
+
+@media (max-width: 1200px)
+  .navCategoriesBlock
+    width: 992px
+    left: -15px
+    .navCategoriesBlockPopularCategories
+      margin-left: 50px
+
+@media (max-width: 992px)
+  #nav
+    .navCategoriesBlock
+      background: #fff
+      box-shadow: 0px 5px 5px rgba(215, 225, 235, 0.1), 0px 10px 15px rgba(215, 225, 235, 0.1), 0px 15px 20px rgba(215, 225, 235, 0.2), 0px 20px 25px rgba(215, 225, 235, 0.25)
+      border-radius: 15px
+      width: 728px
+      padding: 60px 100px
+      .navCategoriesBlockMobile
+        display: block
+      .navCategoriesBlockList, .navCategoriesBlockPopularCategories
+        display: none
+
+@media (max-width: 768px)
+  .navCategoriesBlock
+    padding: 15px
+    left: -10px
+    right: -10px
+    width: auto
+    border-radius: 0px
