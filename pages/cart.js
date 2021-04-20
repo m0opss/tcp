@@ -448,7 +448,7 @@ const Cart = ({}) => {
   return (
     <>
       <Head>
-        <script>
+        {/* <script>
           {$(function () {
             $(".menuMobile").on("click", function (e) {
               e.preventDefault();
@@ -460,7 +460,7 @@ const Cart = ({}) => {
               $(".navCategoriesBlock").toggleClass("navCategoriesBlock_active");
             });
           })}
-        </script>
+        </script> */}
       </Head>
       <MainContainer keywords={"catalog page"}>
         <MainHeader />
