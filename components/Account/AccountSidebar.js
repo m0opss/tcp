@@ -1,10 +1,10 @@
 import styles from "../../styles/account.module.sass";
 import A from "../A";
 
-const AccountSidebar = () => {
+const AccountSidebar = ({className}) => {
   return (
     <>
-      <div className={`${styles.settingsSidebar}`}>
+      <div className={`${className}`}>
         <A href="#" className={`${styles.settingsSidebarLogo}`}>
           <img src="img/logo.svg" alt="" />
         </A>

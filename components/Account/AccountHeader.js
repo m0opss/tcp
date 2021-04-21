@@ -2,10 +2,10 @@ import styles from "../../styles/account.module.sass";
 
 import A from "../A";
 
-const AccountHeader = ({ title }) => {
+const AccountHeader = ({ title, className }) => {
   return (
     <>
-      <div className={`${styles.settingsMainHeader} ${styles.flex} flex`}>
+      <div className={`${className} ${styles.flex} flex`}>
         <h2>{title ? title : ""}</h2>
         <div className={`${styles.settingsMainHeaderRight} ${styles.flex} flex`}>
           <div className={`${styles.settingsMainHeaderSearch}`}>

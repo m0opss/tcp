@@ -26,16 +26,19 @@ const AccountAvatar = () => (
 );
 
 const AccountContainer = ({ children, headerTitle, bottomBlock }) => {
-  console.log(headerTitle)
+  console.log(headerTitle);
   return (
     <>
       <MainContainer>
         <div id={`${styles.settings}`}>
           <div className={`${styles.flex} flex`}>
-            <AccountSidebar />
+            <AccountSidebar className={`${styles.accountSidebar}`} />
             <div className={`${styles.container} container`}>
               <div className={`${styles.settingsMain}`}>
-                <AccountHeader title={headerTitle} />
+                <AccountHeader
+                  className={`${styles.accountMainHeader}`}
+                  title={headerTitle}
+                />
                 {children}
               </div>
               {bottomBlock == "DoubleFactor" ? (
