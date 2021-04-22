@@ -1,5 +1,6 @@
 #account,
 #settings
+  background-color: #fff
   .flex
     .accountSidebar,
     .settingsSidebar
@@ -75,6 +76,34 @@
               display: flex
               li
                 margin-left: 40px
+        .accountMobile
+          display: none
+          width: 550px
+          .accountMobileItem
+            margin-top: 50px
+            h3
+              font-family: "ProximaNova"
+              font-weight: 600
+              font-size: 18px
+              color: #28323C
+              margin-bottom: 30px
+            .flex
+              .accountMobileItemInput
+                margin-right: 70px
+                p
+                  font-family: "ProximaNova"
+                  font-weight: 600
+                  font-size: 16px
+                  color: #73879B
+                  margin-bottom: 0px
+                input
+                  width: 195px
+                  height: 36px
+                  background: #F9F9F9
+                  border: 1px solid #D7E1EB
+                  box-sizing: border-box
+                  border-radius: 8px
+                  margin-bottom: 45px
         .accountMainInfo,
         .accountMainAddress,
         .accountMainContacts,
@@ -135,6 +164,12 @@
             img
               margin-right: 7px
               margin-top: -3px
+          .accountMainContactsInputSocial
+            width: 195px
+            ul
+              li
+                a
+                  margin-left: 0px
         .accountMainInfo,
         .settingsMainInfo
           height: 311px
@@ -274,3 +309,47 @@
           box-sizing: border-box
           border-radius: 8px
           padding: 10px
+
+@media (max-width: 1200px)
+  #account,
+  #settings
+    .flex
+      .container
+        .accountMain,
+        .settingsMain
+          .accountMainHeader,
+          .settingsMainHeader
+            h2
+              display: none
+  #account
+    .flex
+      .accountSidebar
+        width: 200px
+  #account
+    .flex
+      .accountSidebar
+        .accountSidebarMenu
+          li
+            padding-left: 30px
+  #account,
+  #settings
+    .flex
+      .container
+        margin-top: 0px
+        margin-left: 0px
+        padding: 30px
+        position: relative
+        .accountMain,
+        .settingsMain
+          .accountMobile
+            display: block
+        .accountAvatar
+          display: none
+        .accountMainInfo,
+        .accountMainAddress,
+        .accountMainContacts,
+        .settingsMainInfo,
+        .settingsMainData,
+        .settingsMainDataChangePassword,
+        .settingsMainDataChangeLogin
+          display: none

@@ -26,7 +26,7 @@ const AccountAvatar = () => (
 );
 
 const AccountContainer = ({ children, headerTitle, bottomBlock }) => {
-  console.log(headerTitle);
+
   return (
     <>
       <MainContainer>
