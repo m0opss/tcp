@@ -1,14 +1,12 @@
-import AccountMainInfo from "../components/Account/AccountMainInfo";
-import AccountMainContacts from "../components/Account/AccountMainContacts";
-import AccountMainAddress from "../components/Account/AccountMainAddress";
+
 import FinanceContainer from "../components/Finance/FinanceContainer";
 
 import styles from "../styles/finance.module.sass";
 
-const VerificationItem = ({ title, status }) => (
+const VerificationItem = ({ title, status, img }) => (
   <div class={`${styles.verificationItem}`}>
     <div class={`${styles.verificationItemTitle} ${styles.flex} flex`}>
-      <img src="img/passport.svg" alt="" />
+      <img src={img} alt="" />
       <h3>{title}</h3>
     </div>
     <p>Необходимо для пользования cайтом</p>
@@ -51,14 +49,17 @@ const Verification = ({}) => {
           <VerificationItem
             title="Подтверждение паспорта"
             status="Не верифицирован"
+            img="img/passport.svg"
           />
           <VerificationItem
             title="Подтверждение карты"
             status="Ошибка верификации"
+            img="img/card.svg"
           />
           <VerificationItem
             title="Подтверждение адреса"
             status="Верифицирован успешно"
+            img="img/address.svg"
           />
         </div>
       </FinanceContainer>
