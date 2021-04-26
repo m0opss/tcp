@@ -2,18 +2,18 @@ import styles from "../../styles/account.module.sass";
 import A from "../A";
 
 const AccountMainContacts = () => (
-  <div class={`${styles.accountMainContacts}`}>
+  <div className={`${styles.accountMainContacts}`}>
     <h3>Контакты</h3>
-    <div class={`${styles.flex} flex`} style={{ flexWrap: "wrap" }}>
-      <div class={`${styles.accountMainContactsInput}`}>
+    <div className={`${styles.flex} flex`} style={{ flexWrap: "wrap" }}>
+      <div className={`${styles.accountMainContactsInput}`}>
         <p>Email</p>
         <input type="text" />
       </div>
-      <div class={`${styles.accountMainContactsInput}`}>
+      <div className={`${styles.accountMainContactsInput}`}>
         <p>Телефон</p>
         <input type="tel" />
       </div>
-      <div class={`${styles.accountMainContactsInput}`}>
+      <div className={`${styles.accountMainContactsInput}`}>
         <p>Социальные сети</p>
         <ul>
           <li>

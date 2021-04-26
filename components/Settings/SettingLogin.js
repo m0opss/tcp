@@ -1,16 +1,16 @@
 import styles from "../../styles/account.module.sass";
 
 export const ChangingLogin = ({ login, setLogin, setLoginChanging }) => (
-  <div class={`${styles.flex}`} style={{ flexWrap: "wrap" }}>
-    <div class={`${styles.settingsMainDataChangeLoginInputLink}`}>
+  <div className={`${styles.flex}`} style={{ flexWrap: "wrap" }}>
+    <div className={`${styles.settingsMainDataChangeLoginInputLink}`}>
       <p>Старый логин</p>
       <input type="text" />
     </div>
-    <div class={`${styles.settingsMainDataChangeLoginInputLink}`}>
+    <div className={`${styles.settingsMainDataChangeLoginInputLink}`}>
       <p>Новый логин</p>
       <input type="text" />
     </div>
-    <div class={`${styles.settingsMainDataChangeLoginInputLink}`}>
+    <div className={`${styles.settingsMainDataChangeLoginInputLink}`}>
       <p>Новый пароль</p>
       <input type="text" />
     </div>
@@ -24,7 +24,7 @@ export const ChangingLogin = ({ login, setLogin, setLoginChanging }) => (
 );
 
 export const DefaultLogin = ({ login, setLogin, setLoginChanging }) => (
-  <div class={`${styles.settingsMainDataInputLink}`}>
+  <div className={`${styles.settingsMainDataInputLink}`}>
     <p>Логин</p>
     <input
       type="text"

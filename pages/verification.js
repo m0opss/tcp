@@ -4,8 +4,8 @@ import FinanceContainer from "../components/Finance/FinanceContainer";
 import styles from "../styles/finance.module.sass";
 
 const VerificationItem = ({ title, status, img }) => (
-  <div class={`${styles.verificationItem}`}>
-    <div class={`${styles.verificationItemTitle} ${styles.flex} flex`}>
+  <div className={`${styles.verificationItem}`}>
+    <div className={`${styles.verificationItemTitle} ${styles.flex} flex`}>
       <img src={img} alt="" />
       <h3>{title}</h3>
     </div>
@@ -30,11 +30,11 @@ const VerificationItem = ({ title, status, img }) => (
     </span>
 
     {status == "Не верифицирован" || status == "Ошибка верификации" ? (
-      <a href="#" class={`${styles.verificationItemLoad}`}>
+      <a href="#" className={`${styles.verificationItemLoad}`}>
         Загрузить
       </a>
     ) : (
-      <a href="#" class={`${styles.verificationItemRemove}`}>
+      <a href="#" className={`${styles.verificationItemRemove}`}>
         Удалить
       </a>
     )}
@@ -45,7 +45,7 @@ const Verification = ({}) => {
   return (
     <>
       <FinanceContainer headerTitle="Аккаунт">
-        <div class={`${styles.flex} flex`} style={{ flexWrap: "wrap" }}>
+        <div className={`${styles.flex} flex`} style={{ flexWrap: "wrap" }}>
           <VerificationItem
             title="Подтверждение паспорта"
             status="Не верифицирован"

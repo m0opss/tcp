@@ -12,7 +12,7 @@ const SettingsMainData = () => {
   const [passChanging, setPassChanging] = useState(false);
 
   return (
-    <div class={`${styles.settingsMainData}`}>
+    <div className={`${styles.settingsMainData}`}>
       <h3>Данные входа</h3>
       <div>
         {loginChanging ? (

@@ -8,8 +8,8 @@ import styles from "../styles/support.module.sass";
 const AuthBlock = () => {
   return (
     <div id={styles.technicalSupport}>
-      <div class="container">
-        <div class={styles.technicalSupportForm}>
+      <div className="container">
+        <div className={styles.technicalSupportForm}>
           <form action="">
             <select name="" id="">
               <option value="">Тип вопроса</option>
@@ -32,9 +32,9 @@ const AuthBlock = () => {
 const UnauthBlock = () => {
   return (
     <div id={styles.technicalSupportNoA}>
-      <div class="container">
+      <div className="container">
         <h2>Техническая поддержка</h2>
-        <div class={styles.technicalSupportNoAForm}>
+        <div className={styles.technicalSupportNoAForm}>
           <form action="">
             <input type="text" placeholder="Имя" />
             <input type="text" placeholder="Еmail" />

@@ -13,10 +13,10 @@ const About = ({}) => {
         <MainNav />
 
         <div id={styles.about}>
-          <div class="container">
-            <div class={styles.about1}>
+          <div className="container">
+            <div className={styles.about1}>
               <h2>О компании</h2>
-              <div class={`${styles.flex} ${styles.about1Block} flex`}>
+              <div className={`${styles.flex} ${styles.about1Block} flex`}>
                 <img src="img/logoAbout.svg" alt="" />
                 <p>
                   Cum sociis natoque penatibus et magnis dis parturient montes,
@@ -29,7 +29,7 @@ const About = ({}) => {
                 </p>
               </div>
             </div>
-            <div class={styles.about2}>
+            <div className={styles.about2}>
               <h3>Trade Change Place</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
@@ -48,23 +48,23 @@ const About = ({}) => {
                 Curabitur ullamcorper ultricies nisi.{" "}
               </p>
             </div>
-            <div class={styles.about3}>
-              <div class={`${styles.flex} flex`}>
-                <div class={styles.about3Item}>
+            <div className={styles.about3}>
+              <div className={`${styles.flex} flex`}>
+                <div className={styles.about3Item}>
                   <h4>2.7 млн</h4>
                   <p>доступных к покупке товаров</p>
                 </div>
-                <div class={styles.about3Item}>
+                <div className={styles.about3Item}>
                   <h4>84 %</h4>
                   <p>пользователей возвращаются к нам</p>
                 </div>
-                <div class={styles.about3Item} style={{ marginRight: 0 }}>
+                <div className={styles.about3Item} style={{ marginRight: 0 }}>
                   <h4>1,5 млн</h4>
                   <p>посетителей на сайте в день</p>
                 </div>
               </div>
             </div>
-            <div class={styles.about4}>
+            <div className={styles.about4}>
               <h3>Наша цель — быть полезными</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
@@ -87,10 +87,10 @@ const About = ({}) => {
                 bibendum sodales.
               </p>
             </div>
-            <div class={styles.about5}>
+            <div className={styles.about5}>
               <img src="img/aboutImg.jpg" alt="" />
             </div>
-            <div class={styles.about6}>
+            <div className={styles.about6}>
               <h3>Наша цель — быть полезными</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
