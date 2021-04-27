@@ -79,8 +79,9 @@ const Help = ({}) => {
       <MainContainer keywords={"support page"}>
         <MainHeader />
         <MainNav />
-        <HelpContainer>
-          <div id={styles.support}>
+
+        <div id={styles.support}>
+          <HelpContainer>
             <div className={styles.supportBlock}>
               <h2>Чем мы можем вам помочь?</h2>
               <div className={styles.supportBlockSearch}>
@@ -122,8 +123,8 @@ const Help = ({}) => {
                 </ul>
               </div>
             </div>
-          </div>
-        </HelpContainer>
+          </HelpContainer>
+        </div>
 
         <MainFooter />
       </MainContainer>

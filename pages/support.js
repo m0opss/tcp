@@ -63,6 +63,7 @@ const Support = ({}) => {
       <MainContainer keywords={"support page"}>
         <MainHeader />
         <MainNav />
+        
         {isAuth ? <AuthBlock /> : <UnauthBlock />}
         <MainFooter />
       </MainContainer>

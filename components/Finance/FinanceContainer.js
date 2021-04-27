@@ -9,6 +9,7 @@ const FinanceContainer = ({ children, headerTitle }) => {
   return (
     <>
       <MainContainer>
+        
         <div id={`${styles.verification}`}>
           <div className={`${styles.flex} flex`}>
             <FinanceSidebar className={`${styles.verificationSidebar}`} />
