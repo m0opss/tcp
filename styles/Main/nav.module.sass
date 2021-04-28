@@ -13,7 +13,7 @@
 	width: 150px
 #nav .navCategories .navCategoriesContent .navCategoriesButtonMore
 	display: none
-#nav .navCategories .navCategoriesMobile
+#nav .navCategories .menuMobile
 	display: none
 #nav .navCategories img
 	max-height: 24px
@@ -36,18 +36,18 @@
 #nav .navSearch input
 	width: 683px
 	height: 40px
-	border: 2px solid #D7E1EB
-	border-radius: 10px
+	border: 1px solid #D7E1EB
+	border-radius: 5px
 	padding-left: 30px
 #nav .navSearch button
 	background-color: #28323C
 	border: none
 	width: 40px
 	height: 40px
-	border-top-right-radius: 10px
-	border-bottom-right-radius: 10px
+	border-top-right-radius: 5px
+	border-bottom-right-radius: 5px
 	position: relative
-	left: -41px
+	left: -45px
 #nav .navMore
 	padding: 20px 0px
 #nav .navMore ul
@@ -61,67 +61,170 @@
 
 .navCategoriesBlock
 	opacity: 0
-	position: fixed
+	position: absolute
 	visibility: hidden
-	padding: 14px
-	width: 50%
+	padding: 30px 15px
+	width: 1140px
 	height: auto
-	top: 0
-	left: 0
-	border-bottom-right-radius: 10px
-	background-color: #fde5d9
+	top: 66px
+	right: auto
+	left: auto
+	background-color: #F9F9F9
 	color: #000
-	box-sizing: border-box
-	box-shadow: 0 1px 10px 0 rgba(39, 13, 31, 0.3)
+	box-shadow: 0px 5px 5px rgba(215, 225, 235, 0.1), 0px 10px 15px rgba(215, 225, 235, 0.1), 0px 15px 20px rgba(215, 225, 235, 0.2), 0px 20px 25px rgba(215, 225, 235, 0.25)
+	border-radius: 0px 0px 15px 15px
 	transition: all 0.1s
 	z-index: 12
+	.navCategoriesBlockMobile
+		display: none
+		text-align: center
+		a
+			display: inline-grid
+			text-decoration: none
+			margin: 15px
+			img
+				margin: auto
+				margin-bottom: 29px
+			p
+				font-family: "ProximaNova"
+				font-weight: 600
+				font-size: 18px
+				text-align: center
+				color: #28323C
+				width: 140px
+	.navCategoriesBlockList
+		ul
+			list-style: none
+			padding-left: 0px
+			margin-bottom: 0px
+			li
+				margin-bottom: 5px
+				a
+					text-decoration: none
+					font-size: 16px
+					color: #323c46
+				.navCategoriesBlockListArrow
+					margin-left: 70px
+	.navCategoriesBlockPopularCategories
+		margin-left: 95px
+		h3
+			font-family: "ProximaNova"
+			font-weight: 600
+			font-size: 18px
+			color: #28323C
+			margin-bottom: 10px
+		ul
+			list-style: none
+			padding-left: 0px
+			margin-bottom: 30px
+			li
+				margin-bottom: 8.5px
+				a
+					font-weight: normal
+					font-size: 16px
+					color: #73879B
+					text-decoration: none
 .navCategoriesBlock_active
 	transform: scaleX(1) translateX(0)
 	opacity: 1
 	visibility: visible
 
+.menuMobileBlock
+	opacity: 0
+	position: fixed
+	visibility: hidden
+	padding: 14px
+	width: auto
+	height: auto
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	border-bottom-left-radius: 20px
+	background-color: #f5f5f5
+	color: #28323C
+	box-sizing: border-box
+	box-shadow: 0 1px 10px 0 rgba(39, 13, 31, 0.3)
+	transition: all 0.1s
+	z-index: 12
+.menuMobileBlock_active
+	transform: scaleX(1) translateX(0)
+	opacity: 1
+	visibility: visible
+
 @media (max-width: 1200px)
-	#nav .navCategories p
-		font-size: 18px
-	#nav .navCategories img
-		max-height: 15px
-		margin-right: 9px
-	#nav .navSearch input
-		width: 530px
+	#nav
+		.navCategories
+			p
+				font-size: 18px
+			img
+				max-height: 15px
+				margin-top: 10px
+				margin-right: 9px
+		.navSearch
+			input
+				width: 530px
+	.navCategoriesBlock
+		width: 992px
+		left: -15px
+		.navCategoriesBlockPopularCategories
+			margin-left: 50px
 
 @media (max-width: 992px)
-	#nav .navCategories
-		display: flex
-		width: 15%
-	#nav .navCategories p
-		display: none
-	#nav .navCategories .navCategoriesMobile
-		display: block
-		cursor: pointer
-		margin-left: 0px
-		margin-top: 0px
-		margin-right: 20px
-		min-height: 25px
-	#nav .navCategories img
-		max-height: 17px
-		margin-right: 6px
-	#nav .navCategories .navCategoriesContent .navCategoriesButtonMore
-		display: block
-	#nav .navSearch input
-		width: 385px
-	#nav .navMore ul li
-		margin-left: 20px
+	#nav
+		.navCategoriesBlock
+			background: #f9f9f9
+			box-shadow: 0px 5px 5px rgba(215, 225, 235, 0.1), 0px 10px 15px rgba(215, 225, 235, 0.1), 0px 15px 20px rgba(215, 225, 235, 0.2), 0px 20px 25px rgba(215, 225, 235, 0.25)
+			border-radius: 15px
+			width: 728px
+			padding: 60px 100px
+			.navCategoriesBlockMobile
+				display: block
+			.navCategoriesBlockList, .navCategoriesBlockPopularCategories
+				display: none
+		.navCategories
+			display: flex
+			width: 15%
+			p
+				display: none
+			.menuMobile
+				display: block
+				cursor: pointer
+				margin-left: 0px
+				margin-top: 6px
+				margin-right: 20px
+				min-height: 25px
+			img
+				max-height: 17px
+				margin-right: 6px
+			.navCategoriesContent
+				.navCategoriesButtonMore
+					display: block
+		.navSearch
+			input
+				width: 385px
+		.navMore
+			ul
+				li
+					margin-left: 20px
 
 @media (max-width: 768px)
-	#nav .navCategories
-		width: 19%
-	#nav .navSearch
-		position: relative
-	#nav .navSearch input
-		width: 391px
-	#nav .navSearch button
-		position: absolute
-		left: auto
-		right: 0
-	#nav .navMore
-		display: none
+	#nav
+		.navCategoriesBlock
+			padding: 15px
+			left: -10px
+			right: -10px
+			width: auto
+			border-radius: 0px
+			.navCategories
+				width: 19%
+			.navSearch
+				position: relative
+				input
+					width: 391px
+				button
+					position: absolute
+					left: auto
+					right: 0
+			.navMore
+				display: none

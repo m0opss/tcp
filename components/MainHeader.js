@@ -42,6 +42,7 @@ const MainHeader = () => {
                   <a href="#">
                     <img src="img/messages.svg" alt="" />
                     <p>Уведомления</p>
+                    <span>21</span>
                   </a>
                 </li>
                 <li>

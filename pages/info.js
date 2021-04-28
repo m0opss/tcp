@@ -23,7 +23,7 @@ const Info = ({}) => {
               </p>
               <div className={`${styles.referenceBlockList} flex`}>
                 <ul>
-                  <li class={styles.active}>
+                  <li className={styles.active}>
                     <h3>Использование сайта</h3>
                   </li>
                   <li>
