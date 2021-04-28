@@ -50,11 +50,6 @@ const MainHeader = () => {
                     <img src="img/log-in.svg" alt="" />
                     <p>Войти</p>
                   </A>
-
-                  {/* <a href="#" className={styles.headerMenuLogIn}>
-                    <img src="img/log-in.svg" alt="" />
-                    <p>Войти</p>
-                  </a> */}
                 </li>
               </ul>
             </div>

@@ -315,12 +315,21 @@ textarea:focus:required:invalid
 input:required:valid,
 textarea:required:valid
 	border-color: green
-a:hover
-	text-decoration: none
+
+input, textarea
+	outline: none
+	padding: 0px 5px
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
 body
 	margin: 0
 	font-family: "PT Sans", sans-serif
 	background: #f9f9f9
+a:hover
+	text-decoration: none
 
 .flex
 	display: -webkit-box

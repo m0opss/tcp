@@ -72,8 +72,9 @@ let testArr2 = [
   },
 ];
 
-const Help = ({}) => {
+const Help = ({ pathname }) => {
   const isAuth = false;
+  console.log();
   return (
     <>
       <MainContainer keywords={"support page"}>
@@ -81,7 +82,7 @@ const Help = ({}) => {
         <MainNav />
 
         <div id={styles.support}>
-          <HelpContainer>
+          <HelpContainer url={pathname.replace("/", "")}>
             <div className={styles.supportBlock}>
               <h2>Чем мы можем вам помочь?</h2>
               <div className={styles.supportBlockSearch}>
@@ -95,18 +96,20 @@ const Help = ({}) => {
               </div>
               <div className={`${styles.supportBlockList} flex`}>
                 <ul>
-                  {testArr1.map((i) => (
+                  {testArr1.map((i, ind) => (
                     <SupportBlockListImg
                       img={i.img}
+                      key={i + ind}
                       title={i.title}
                       text={i.text}
                     />
                   ))}
                 </ul>
                 <ul>
-                  {testArr2.map((i) => (
+                  {testArr2.map((i, ind) => (
                     <SupportBlockListImg
                       img={i.img}
+                      key={i + ind}
                       title={i.title}
                       text={i.text}
                     />
@@ -133,3 +136,7 @@ const Help = ({}) => {
 };
 
 export default Help;
+
+Help.getInitialProps = ({ pathname }) => {
+  return { pathname };
+};
