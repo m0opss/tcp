@@ -13,7 +13,7 @@ const AccountMainContacts = () => (
         <p>Телефон</p>
         <input type="tel" />
       </div>
-      <div className={`${styles.accountMainContactsInput}`}>
+      <div className={`${styles.accountMainContactsInput} ${styles.accountMainContactsInputSocial}`}>
         <p>Социальные сети</p>
         <ul>
           <li>

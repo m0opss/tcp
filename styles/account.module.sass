@@ -1,6 +1,6 @@
 #account,
 #settings
-  background-color: #fff
+  // background-color: #fff
   .flex
     .accountSidebar,
     .settingsSidebar
@@ -13,6 +13,8 @@
         display: block
         margin-left: 35px
         margin-bottom: 55px
+        .accountSidebarLogoMobile
+          display: none
       .accountSidebarMenu,
       .settingsSidebarMenu
         list-style: none
@@ -76,10 +78,18 @@
               display: flex
               li
                 margin-left: 40px
-        .accountMobile
+        .accountMobile,
+        .settingsMobile
           display: none
           width: 550px
-          .accountMobileItem
+          .settingsMobileButton
+            font-family: "ProximaNova"
+            font-weight: 600
+            font-size: 18px
+            color: #73C8EB
+            margin: 0px 7px
+          .accountMobileItem,
+          .settingsMobileItem
             margin-top: 50px
             h3
               font-family: "ProximaNova"
@@ -87,23 +97,77 @@
               font-size: 18px
               color: #28323C
               margin-bottom: 30px
-            .flex
-              .accountMobileItemInput
-                margin-right: 70px
-                p
-                  font-family: "ProximaNova"
-                  font-weight: 600
-                  font-size: 16px
-                  color: #73879B
-                  margin-bottom: 0px
-                input
-                  width: 195px
-                  height: 36px
-                  background: #F9F9F9
-                  border: 1px solid #D7E1EB
-                  box-sizing: border-box
-                  border-radius: 8px
-                  margin-bottom: 45px
+            .settingsMobileItemButton
+              width: 30px
+              height: 16px
+              background: #A5B4C3
+              border-radius: 6px
+              .settingsMobileItemButtonToggle
+                width: 16px
+                height: 14px
+                background: #F9F9F9
+                border-radius: 5px
+                position: relative
+                top: 1px
+                left: 1px
+            .settingsMobileItemButtonOn
+              width: 30px
+              height: 16px
+              background: #73C8EB
+              border-radius: 6px
+              .settingsMobileItemButtonToggleOn
+                width: 16px
+                height: 14px
+                background: #F9F9F9
+                border-radius: 5px
+                position: relative
+                top: 1px
+                left: 12px
+            .settingsMobileItemButtonP
+              width: 310px
+              margin-left: 15px
+              font-weight: normal
+              font-size: 16px
+              color: #73879B
+              margin-top: -3px
+            .accountMobileItemInput,
+            .settingsMobileItemInput
+              margin-right: 70px
+              p
+                font-family: "ProximaNova"
+                font-weight: 600
+                font-size: 16px
+                color: #73879B
+                margin-bottom: 0px
+              input,
+              select
+                padding: 0px 15px
+                width: 195px
+                height: 36px
+                background: #F9F9F9
+                border: 1px solid #D7E1EB
+                box-sizing: border-box
+                border-radius: 8px
+                margin-bottom: 45px
+              a
+                font-weight: bold
+                font-size: 16px
+                color: #73C8EB
+              img
+                width: 64px
+                height: 64px
+                position: relative
+                top: -22px
+                right: -35px
+            ul
+              padding-left: 0px
+              list-style: none
+              display: inline-flex
+              li
+                margin-right: 10px
+            .settingsMobileItemInput
+              a
+                margin-left: 35px
         .accountMainInfo,
         .accountMainAddress,
         .accountMainContacts,
@@ -323,12 +387,11 @@
               display: none
   #account
     .flex
-      .accountSidebar
+      .accountSidebar,
+      .settingsSidebar
         width: 200px
-  #account
-    .flex
-      .accountSidebar
-        .accountSidebarMenu
+        .accountSidebarMenu,
+        .settingsSidebarMenu
           li
             padding-left: 30px
   #account,
@@ -341,15 +404,93 @@
         position: relative
         .accountMain,
         .settingsMain
-          .accountMobile
+          .accountMobile,
+          .settingsMobile
             display: block
-        .accountAvatar
-          display: none
+        .accountAvatar,
+        .settingsAuthentication,
         .accountMainInfo,
         .accountMainAddress,
         .accountMainContacts,
         .settingsMainInfo,
         .settingsMainData,
         .settingsMainDataChangePassword,
-        .settingsMainDataChangeLogin
+        .settingsMainDataChangeLogin,
+        .settingsAuthenticationOn
           display: none
+
+@media (max-width: 992px)
+  #account,
+  #settings
+    .flex
+      .accountSidebar,
+      .settingsSidebar
+        width: 48px
+        .accountSidebarLogo,
+        .settingsSidebarLogo
+          margin-top: 0px
+          margin-left: 11px
+          .accountSidebarLogoDesktop
+            display: none
+          .accountSidebarLogoMobile
+            display: block
+        .accountSidebarMenu,
+        .settingsSidebarMenu
+          li
+            padding: 0px
+            text-align: center
+            a
+              span
+                display: none
+
+@media (max-width: 768px)
+  #account,
+  #settings
+    .flex
+      .accountSidebar,
+      .settingsSidebar
+        position: absolute
+        left: 0
+        top: 0
+        bottom: 0
+        height: auto
+      .container
+        .accountMain,
+        .settingsMain
+          .accountMainHeader,
+          .settingsMainHeader
+            .accountMainHeaderRight,
+            .settingsMainHeaderRight
+              margin-left: 45px
+              ul
+                margin-top: 7px
+                margin-bottom: 0px
+                li
+                  margin-left: 28px
+                  a
+                    img
+                      max-width: 30px
+          .accountMobile,
+          .settingsMobile
+            margin-left: 50px
+            width: 550px
+            .accountMobileItem,
+            .settingsMobileItem
+              .flex
+                .accountMobileItemInput,
+                .settingsMobileInput
+                  margin-right: 30px
+                  input,
+                  select
+                    width: 170px
+  #settings
+    .flex
+      .container
+        .settingsMain
+          .settingsMobile
+            .settingsMobileItem
+              .settingsMobileItemInput
+                margin-right: 25px
+                input,
+                select
+                  width: 170px

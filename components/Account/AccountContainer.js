@@ -25,14 +25,16 @@ const AccountAvatar = () => (
   </div>
 );
 
-const AccountContainer = ({ children, headerTitle, bottomBlock }) => {
-
+const AccountContainer = ({ children, headerTitle, bottomBlock, pathname }) => {
   return (
     <>
       <MainContainer>
-        <div id={`${styles.settings}`}>
+        <div id={`${styles.account}`}>
           <div className={`${styles.flex} flex`}>
-            <AccountSidebar className={`${styles.accountSidebar}`} />
+            <AccountSidebar
+              pathname={pathname}
+              className={`${styles.accountSidebar}`}
+            />
             <div className={`${styles.container} container`}>
               <div className={`${styles.settingsMain}`}>
                 <AccountHeader

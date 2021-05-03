@@ -216,9 +216,9 @@ const MainNav = ({}) => {
             </div>
             <div className={`${styles.navSearch}`}>
               <a href="#">
-                <img src="img/microphone.svg" alt="" />
+                <img src="img/microphone.svg" alt="" />{' '}
               </a>
-              <input type="search" placeholder="Название товара..." />
+              <input type="search" placeholder="Название товара..." />{' '}
               <button>
                 <img src="img/search.svg" alt="" />
               </button>

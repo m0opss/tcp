@@ -4,7 +4,7 @@ import A from "../A";
 const AccountMainAddress = () => (
   <div className={`${styles.accountMainAddress}`}>
     <h3>Основная информация</h3>
-    <div className={`${styles.flex}`} style={{ flexWrap: "wrap" }}>
+    <div className={`${styles.flex} flex`} style={{ flexWrap: "wrap" }}>
       <div className={`${styles.accountMainAddressInput}`}>
         <p>Страна</p>
         <select name="" id="">

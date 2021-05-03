@@ -1,12 +1,13 @@
-
 import SettingsMainInfo from "../components/Settings/SettingsMainInfo";
 import SettingsMainData from "../components/Settings/SettingsMainData";
 import AccountContainer from "../components/Account/AccountContainer";
+import SettingsMobile from "../components/Account/SettingsMobile";
 
-const Settings = ({}) => {
+const Settings = ({ pathname }) => {
   return (
     <>
-      <AccountContainer bottomBlock="DoubleFactor">
+      <AccountContainer pathname={pathname} bottomBlock="DoubleFactor">
+        <SettingsMobile />
         <SettingsMainInfo />
         <SettingsMainData />
       </AccountContainer>
@@ -15,3 +16,7 @@ const Settings = ({}) => {
 };
 
 export default Settings;
+
+Settings.getInitialProps = ({ pathname }) => {
+  return { pathname };
+};

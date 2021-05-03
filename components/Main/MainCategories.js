@@ -3,7 +3,7 @@ import styles from "../../styles/Main/main.module.sass";
 
 const CategoryItem = ({ name, img, link }) => (
   <li>
-    <img src={img} alt="" />
+    <img src={img} alt="" />{' '}
     <a href={link}>{name}</a>
     <img
       src="img/arrowRight.svg"

@@ -49,7 +49,7 @@ const MainFooter = () => {
                 Cookies: "#",
               }}
             />
-            <div className={styles.footerItem}>
+            <div className={styles.footerItem} style={{ paddingLeft: "130px" }}>
               <h3>Язык сайта</h3>
               <select name="" id="">
                 <option value="rus">Русский</option>
