@@ -82,7 +82,7 @@ const Help = ({ pathname }) => {
         <MainNav />
 
         <div id={styles.support}>
-          <HelpContainer url={pathname.replace("/", "")}>
+          <HelpContainer pathname={pathname}>
             <div className={styles.supportBlock}>
               <h2>Чем мы можем вам помочь?</h2>
               <div className={styles.supportBlockSearch}>

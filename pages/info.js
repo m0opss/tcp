@@ -5,7 +5,7 @@ import MainNav from "../components/Main/MainNav";
 import MainFooter from "../components/MainFooter";
 import styles from "../styles/help.module.sass";
 
-const Info = ({}) => {
+const Info = ({ pathname }) => {
   const isAuth = false;
   return (
     <>
@@ -13,7 +13,7 @@ const Info = ({}) => {
         <MainHeader />
         <MainNav />
         <div id={styles.reference}>
-          <HelpContainer>
+          <HelpContainer pathname={pathname}>
             <div className={styles.referenceBlock}>
               <h2>Условия использования сайта</h2>
               <p>
@@ -85,3 +85,7 @@ const Info = ({}) => {
 };
 
 export default Info;
+
+Info.getInitialProps = ({ pathname }) => {
+  return { pathname };
+};

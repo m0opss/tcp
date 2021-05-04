@@ -31,7 +31,8 @@
     &:hover
       .productItemBuyBlock
         opacity: 1
-      ul img
+    ul
+      img
         margin: 0
     a
       text-decoration: none
@@ -51,9 +52,9 @@
       opacity: 0
       position: absolute
       width: 344px
-      height: 156px
+      height: 170px
       left: 0px
-      top: 320px
+      top: 305px
       background: #323C46
       border-radius: 0px 0px 15px 15px
       transition: all .2s ease
@@ -98,6 +99,7 @@
             font-size: 14px
             font-weight: 700
     .productItemPrice
+      margin: 0
       margin-top: 26px
       font-size: 20px
       color: #323C46
@@ -133,41 +135,107 @@
         margin-bottom: 0px
 
 @media (max-width: 1200px)
-  #popular .productItems .productItem
-    width: 285px
-  #popular .productItems .productItem a img
-    max-width: 208px
+  .productItems
+    .productItem
+      width: 285px
+      height: 436px
+      a
+        img
+          max-width: 208px
+      .productItemPrice
+        margin: 0
+        margin-top: 19px
+      .productItemBuyBlock
+        top: 275px
+        width: 285px
+        h4
+          padding-left: 30px
+        ul
+          li
+            text-align: center
+            justify-content: center
+            margin-left: 11px
+            a
+              display: contents
+            img
+              margin-right: 2px
 
 @media (max-width: 992px)
   #popular
     padding: 0px 30px
-  #popular .productItems .productItem
+  .productItems .productItem
     width: 307px
-  #popular .productItems .productItemMoreContent
+    margin: auto
+    margin-bottom: 30px
+  .productItems .productItemMoreContent
     display: none
+  .productItems .productItem .productItemBuyBlock
+    width: 307px
+    h4
+      padding-left: 20px
 
 @media (max-width: 768px)
-  #popular .productItems .productItem
+  .productItems .productItem
     text-align: center
     width: 213px
     height: 350px
     padding: 20px
-  #popular .productItems .productItem a img
+  .productItems .productItem a img
     margin: 23px 10px
     max-width: 122px
-  #popular .productItems .productItem a h3
+  .productItems .productItem a h3
     text-align: left
     font-size: 14px
     font-weight: 400
-  #popular .productItems .productItem .productItemPrice .productItemPriceCryptocurrency
+  .productItems .productItem .productItemPrice img
+    margin: 0
+  .productItems .productItem .productItemPrice .productItemPriceCryptocurrency
     margin-top: 3px
-  #popular .productItems .productItem .productItemPrice .productItemPriceCryptocurrency p
+  .productItems .productItem .productItemPrice .productItemPriceCryptocurrency p
     font-size: 18px
     font-weight: 700
     margin-top: 2px
     margin-bottom: 0px
-  #popular .productItems .productItem .productItemPrice .productItemPriceCurrency p
+  .productItems .productItem .productItemPrice .productItemPriceCurrency p
     font-size: 18px
     font-weight: 700
     margin-top: 2px
     margin-bottom: 0px
+  .productItems .productItem .productItemBuyBlock
+    display: none
+
+@media (max-width: 576px)
+  #popular
+    padding: 0px
+    margin-top: 15px
+  #popular h2
+    font-size: 18px
+    margin-bottom: 15px
+  #popular h2 a
+    font-size: 18px
+  #popular h2 a img
+    max-width: 12px
+  .productItems .productItem
+    text-align: center
+    width: 165px
+    height: 244px
+    padding: 8px
+    margin-bottom: 15px
+  .productItems .productItem a img
+    margin: 7px 10px
+    max-width: 113px
+  .productItems .productItem .productItemCatalogBut
+    text-align: left
+    margin-top: 4px
+  .productItems .productItem .productItemPrice .productItemPriceCurrency img
+    margin-top: 3px
+    height: 14px
+  .productItems .productItem .productItemPrice .productItemPriceCurrency p
+    font-size: 10px
+  .productItems .productItem .productItemPrice .productItemPriceCryptocurrency img
+    margin-top: 3px
+    height: 14px
+  .productItems .productItem .productItemPrice .productItemPriceCryptocurrency p
+    font-size: 10px
+  .productItems .productItem .productItemPrice
+    margin-top: 37px

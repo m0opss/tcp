@@ -3,152 +3,111 @@ import A from "../components/A";
 import MainHeader from "../components/MainHeader";
 import MainFooter from "../components/MainFooter";
 import MainNav from "../components/Main/MainNav";
-import Head from "next/head";
 import styles from "../styles/cart.module.sass";
-import styles_nav from "../styles/Main/nav.module.sass";
+
 // {`${styles.productItems} ${styles.flex} flex`}
+const CartPriceTotalItem = ({ title, value, addClass }) => (
+  <div className={`${styles.cartPriceTotalItem} ${styles.flex} flex`}>
+    <p className={styles.cartPriceTotalItem1}>{title}</p>
+    <p
+      className={`${
+        addClass
+          ? `${styles.cartPriceTotalItem2} ${addClass}`
+          : styles.cartPriceTotalItem2
+      }`}
+    >
+      {value}
+    </p>
+  </div>
+);
+
+const CartItemBlock = ({ img, title, rest, credit, usd }) => (
+  <div className={`${styles.cartItemBlock} ${styles.flex} flex`}>
+    <img src={img} alt="" />
+    <div className={styles.cartItemBlockTitle}>
+      <h3>{title}</h3>
+      <div className={`${styles.cartItemBlockTitleCount} ${styles.flex} flex`}>
+        <span>
+          <img src="img/srMinus.svg" alt="" />
+        </span>
+        <input type="phone" />
+        <span>
+          <img src="img/srPlus.svg" alt="" />
+        </span>
+      </div>
+      <p>
+        Осталось шт: <span>{rest}</span>
+      </p>
+    </div>
+    <div className={styles.cartItemBlockTitleMore}>
+      <p>US {usd}</p>
+      <p>TPC Credit: {credit}</p>
+      <ul className={`${styles.cartItemBlockTitleMoreUl} ${styles.flex} flex`}>
+        <li className={styles.cartItemBlockTitleMoreLi1}>
+          <a href="#">
+            <img src="img/srBookmark.svg" alt="" /> В избранное
+          </a>
+        </li>
+        <li className={styles.cartItemBlockTitleMoreLi2}>
+          <a href="#">
+            <img src="img/srTrash.svg" alt="" /> Удалить
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+);
 
 const CartContainer = () => (
-  <div id="cart">
+  <div id={styles.cart}>
     <div className="container">
-      <div className="cartContent flex">
-        <div className="cartItems">
-          <div className="cartItemsTitle flex">
+      <div className={`${styles.cartContent} ${styles.flex} flex`}>
+        <div className={styles.cartItems}>
+          <div className={`${styles.cartItemsTitle} ${styles.flex} flex`}>
             <h2>Корзина</h2>
             <p>
               Всего товаров: <strong>3</strong>
             </p>
           </div>
-          <div className="cartItemsBlock">
-            <div className="cartItemBlock flex">
-              <img src="img/glasses.jpg" alt="" />
-              <div className="cartItemBlockTitle">
-                <h3>Солнцезащитные очки Гучи</h3>
-                <div className="cartItemBlockTitleCount flex">
-                  <span>
-                    <img src="img/srMinus.svg" alt="" />
-                  </span>
-                  <input type="phone" />
-                  <span>
-                    <img src="img/srPlus.svg" alt="" />
-                  </span>
-                </div>
-                <p>
-                  Осталось шт: <span>5</span>
-                </p>
-              </div>
-              <div className="cartItemBlockTitleMore">
-                <p>US 135</p>
-                <p>TPC Credit: 1 000</p>
-                <ul className="cartItemBlockTitleMoreUl flex">
-                  <li className="cartItemBlockTitleMoreLi1">
-                    <a href="#">
-                      <img src="img/srBookmark.svg" alt="" /> В избранное
-                    </a>
-                  </li>
-                  <li className="cartItemBlockTitleMoreLi2">
-                    <a href="#">
-                      <img src="img/srTrash.svg" alt="" /> Удалить
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="cartItemBlock flex">
-              <img src="img/glasses.jpg" alt="" />
-              <div className="cartItemBlockTitle">
-                <h3>Солнцезащитные очки Гучи</h3>
-                <div className="cartItemBlockTitleCount flex">
-                  <span>
-                    <img src="img/srMinus.svg" alt="" />
-                  </span>
-                  <input type="phone" />
-                  <span>
-                    <img src="img/srPlus.svg" alt="" />
-                  </span>
-                </div>
-                <p>
-                  Осталось шт: <span>5</span>
-                </p>
-              </div>
-              <div className="cartItemBlockTitleMore">
-                <p>US 135</p>
-                <p>TPC Credit: 1 000</p>
-                <ul className="cartItemBlockTitleMoreUl flex">
-                  <li className="cartItemBlockTitleMoreLi1">
-                    <a href="#">
-                      <img src="img/srBookmark.svg" alt="" /> В избранное
-                    </a>
-                  </li>
-                  <li className="cartItemBlockTitleMoreLi2">
-                    <a href="#">
-                      <img src="img/srTrash.svg" alt="" /> Удалить
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="cartItemBlock flex">
-              <img src="img/glasses.jpg" alt="" />
-              <div className="cartItemBlockTitle">
-                <h3>Солнцезащитные очки Гучи</h3>
-                <div className="cartItemBlockTitleCount flex">
-                  <span>
-                    <img src="img/srMinus.svg" alt="" />
-                  </span>
-                  <input type="phone" />
-                  <span>
-                    <img src="img/srPlus.svg" alt="" />
-                  </span>
-                </div>
-                <p>
-                  Осталось шт: <span>5</span>
-                </p>
-              </div>
-              <div className="cartItemBlockTitleMore">
-                <p>US 135</p>
-                <p>TPC Credit: 1 000</p>
-                <ul className="cartItemBlockTitleMoreUl flex">
-                  <li className="cartItemBlockTitleMoreLi1">
-                    <a href="#">
-                      <img src="img/srBookmark.svg" alt="" /> В избранное
-                    </a>
-                  </li>
-                  <li className="cartItemBlockTitleMoreLi2">
-                    <a href="#">
-                      <img src="img/srTrash.svg" alt="" /> Удалить
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <div className={styles.cartItemsBlock}>
+            <CartItemBlock
+              img="img/glasses.jpg"
+              title="Солнцезащитные очки Гучи"
+              rest={5}
+              credit={1000}
+              usd={135}
+            />
+            <CartItemBlock
+              img="img/glasses.jpg"
+              title="Солнцезащитные очки Гучи"
+              rest={5}
+              credit={1000}
+              usd={135}
+            />
+            <CartItemBlock
+              img="img/glasses.jpg"
+              title="Солнцезащитные очки Гучи"
+              rest={5}
+              credit={1000}
+              usd={135}
+            />
           </div>
         </div>
-        <div className="cartPrice">
-          <div className="cartPriceTotal">
+        <div className={styles.cartPrice}>
+          <div className={styles.cartPriceTotal}>
             <h3>Стоимость заказа</h3>
-            <div className="cartPriceTotalItem flex">
-              <p className="cartPriceTotalItem1">Товары</p>
-              <p className="cartPriceTotalItem2">US 15 456</p>
-            </div>
-            <div className="cartPriceTotalItem flex">
-              <p className="cartPriceTotalItem1">TPC Credit</p>
-              <p className="cartPriceTotalItem2">1 000</p>
-            </div>
-            <div className="cartPriceTotalItem flex">
-              <p className="cartPriceTotalItem1">Доставка</p>
-              <p className="cartPriceTotalItem2">US 353.5</p>
-            </div>
-            <div className="cartPriceTotalItem flex">
-              <p className="cartPriceTotalItem1">Всего к оплате</p>
-              <p className="cartPriceTotalItem2 cartPriceTotalItemT">
-                US 15 780
-              </p>
-            </div>
+            <CartPriceTotalItem title="Товары" value="US 15 456" />
+            <CartPriceTotalItem title="TPC Credit" value="1 000" />
+            <CartPriceTotalItem title="Доставка" value="US 353.5" />
+            <CartPriceTotalItem
+              title="Всего к оплате"
+              addClass={styles.cartPriceTotalItemT}
+              value=" US 15 780"
+            />
             <a href="#">Оформить заказ</a>
           </div>
-          <div className="cartPriceInsurance">
-            <div className="cartPriceInsuranceBlock">
+          <div className={styles.cartPriceInsurance}>
+            <div className={styles.cartPriceInsuranceBlock}>
               <h3>Страхование товаров</h3>
               <select className="" name="">
                 <option value="">%</option>

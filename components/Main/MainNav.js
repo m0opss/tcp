@@ -236,7 +236,7 @@ const MainNav = ({}) => {
                   </A>
                 </li>
                 <li>
-                  <A href="/compare">
+                  <A href="/comparison">
                     <img src="img/compare-scales.svg" alt="" />
                   </A>
                 </li>
