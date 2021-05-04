@@ -34,7 +34,7 @@ const MainFooter = () => {
               content={{
                 "Мой кабинет": "/account",
                 Сохраненные: "/favorites",
-                Сравнения: "#",
+                Сравнения: "/comparison",
                 Корзина: "/cart",
                 Валюты: "#",
               }}
