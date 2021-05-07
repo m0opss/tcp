@@ -3,10 +3,13 @@ import MainHeader from "../components/MainHeader";
 import MainFooter from "../components/MainFooter";
 import MainLinks from "../components/Main/MainLinks";
 import MainBanner from "../components/Main/MainBanner";
+import MainAuthForm from "../components/Main/MainAuthForm";
 import Nav from "../components/Nav/Nav";
 
 import styles from "../styles/Main/main.module.sass";
 import Popular from "../components/Main/Popular";
+
+
 
 const Index = ({ items }) => {
   return (
@@ -18,6 +21,7 @@ const Index = ({ items }) => {
           <div className="flex">
             <MainLinks />
             <MainBanner />
+            <MainAuthForm />
           </div>
         </div>
       </div>
