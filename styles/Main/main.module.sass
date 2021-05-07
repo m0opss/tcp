@@ -1,53 +1,80 @@
-#main .mainCategories
-  // background: #fff
-  // border: 0.5px solid #D7E1EB
-  // box-shadow: 0px 51px 104px rgba(215, 225, 235, 0.1), 0px 35.3283px 66.0385px rgba(215, 225, 235, 0.0787172), 0px 23.0466px 39.7201px rgba(215, 225, 235, 0.0644315), 0px 13.7983px 22.6799px rgba(215, 225, 235, 0.054344), 0px 7.22624px 12.5528px rgba(215, 225, 235, 0.045656), 0px 2.97376px 6.97376px rgba(215, 225, 235, 0.0355685), 0px 0.683965px 3.57784px rgba(215, 225, 235, 0.0212828)
-  // border-radius: 15px
-  // padding: 30px
-  width: 360px
-#main .mainCategories ul
-  list-style: none
-  padding-left: 0px
-  margin-bottom: 0px
-#main .mainCategories ul li
-  margin-bottom: 5px
-#main .mainCategories ul li a
-  text-decoration: none
-  font-size: 16px
-  color: #323c46
-#main .mainCategories ul li .mainCategoriesArrow
-  margin-left: 70px
+#main
+  padding-top: 55px
+#main .mainLinks
+  width: 270px
+  ul
+    list-style: none
+    padding-left: 0px
+    margin-bottom: 0px
+  .mainLinksItem
+    width: 100%
+    height: 80px
+    background: #FFFFFF
+    box-shadow: 1px 1px 6px rgba(215, 225, 235, 0.18)
+    border-radius: 15px
+    margin-bottom: 30px
+    .mainLinksItemLink
+      position: relative
+      text-decoration: none
+      width: 100%
+      height: 100%
+      display: flex
+      align-items: center
+      img
+        margin-left: 20px
+      .mainLinksItemName
+        margin-left: 20px
+        margin-bottom: 0
+        display: flex
+        align-items: center
+      p
+        font-family: PT Sans
+        font-style: normal
+        font-weight: normal
+        font-size: 16px
+        line-height: 100%
+        color: #000000
+
 #main .mainBanner
-  width: 730px
-  // margin: 0px 30px
+  width: 570px
+  margin: 0px 30px
 #main .mainBanner .mainBannerItem
-  width: 730px
-  height: 353px
+  width: 570px
+  height: 290px
   background: linear-gradient(256.65deg, #C3EBFF 6.26%, rgba(130, 210, 245, 0.2) 52.65%)
   box-shadow: 0px 20px 25px rgba(215, 225, 235, 0.15), 0px 15px 20px rgba(215, 225, 235, 0.1), 0px 10px 15px rgba(215, 225, 235, 0.07), 0px 5px 5px rgba(215, 225, 235, 0.05)
   border-radius: 15px
+#main .mainBanner .mainBannerItem .mainBannerItemImg
+  position: relative
+
 #main .mainBanner .mainBannerItem .mainBannerItemImg img
-  max-width: 319px
-  margin-top: 33px
+  position: absolute
+  bottom: -35px
+  left: -45px
+  width: 290px
+  height: 100%
+  padding: 35px
 #main .mainBanner .mainBannerItem .mainBannerItemTxt
   text-align: right
   width: 360px
+  position: absolute
+  top: 53px
+  right: 78px
 #main .mainBanner .mainBannerItem .mainBannerItemTxt h2
   font-family: "ProximaNova"
   font-weight: bold
   font-size: 34px
   color: #73879B
-  margin-top: 68px
-  margin-bottom: 20px
+  margin-bottom: 15px
 #main .mainBanner .mainBannerItem .mainBannerItemTxt p
   font-family: "ProximaNova"
   font-weight: 600
   font-size: 18px
   text-align: left
-  width: 177px
+  width: 180px
   margin: 0px auto
-  margin-right: 0px
-  margin-bottom: 20px
+  margin-right: -3px
+  margin-bottom: 26px
 #main .mainBanner .mainBannerItem .mainBannerItemTxt a
   font-size: 12px
   line-height: 150%
@@ -116,7 +143,7 @@
     width: 230px
 
 @media (max-width: 992px)
-  #main .mainCategories
+  #main .mainLinks
     display: none
   #main .mainBanner
     width: 690px

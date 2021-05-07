@@ -62,51 +62,77 @@ const MainBanner = ({ children, keywords }) => {
               </>
             }
           />
+          <CarouselItem
+            img="img/banner-1.png"
+            alt=""
+            textEl={
+              <>
+                <h2>До 12 апреля</h2>
+                <p>Мы снизили цены на детскую продукцию до 55%</p>
+                <a href="#">
+                  Перейти в&#160;<strong>Детские товары</strong>{" "}
+                  <img src="img/arrow-right.svg" alt="" />
+                </a>
+              </>
+            }
+          />
+          <CarouselItem
+            img="img/banner-1.png"
+            alt=""
+            textEl={
+              <>
+                <h2>До 12 апреля</h2>
+                <p>Мы снизили цены на детскую продукцию до 55%</p>
+                <a href="#">
+                  Перейти в&#160;<strong>Детские товары</strong>{" "}
+                  <img src="img/arrow-right.svg" alt="" />
+                </a>
+              </>
+            }
+          />
+          <CarouselItem
+            img="img/banner-1.png"
+            alt=""
+            textEl={
+              <>
+                <h2>До 12 апреля</h2>
+                <p>Мы снизили цены на детскую продукцию до 55%</p>
+                <a href="#">
+                  Перейти в&#160;<strong>Детские товары</strong>{" "}
+                  <img src="img/arrow-right.svg" alt="" />
+                </a>
+              </>
+            }
+          />
+          <CarouselItem
+            img="img/banner-1.png"
+            alt=""
+            textEl={
+              <>
+                <h2>До 12 апреля</h2>
+                <p>Мы снизили цены на детскую продукцию до 55%</p>
+                <a href="#">
+                  Перейти в&#160;<strong>Детские товары</strong>{" "}
+                  <img src="img/arrow-right.svg" alt="" />
+                </a>
+              </>
+            }
+          />
+          <CarouselItem
+            img="img/banner-1.png"
+            alt=""
+            textEl={
+              <>
+                <h2>До 12 апреля</h2>
+                <p>Мы снизили цены на детскую продукцию до 55%</p>
+                <a href="#">
+                  Перейти в&#160;<strong>Детские товары</strong>{" "}
+                  <img src="img/arrow-right.svg" alt="" />
+                </a>
+              </>
+            }
+          />
         </OwlCarousel>
-        {/* <div className="owl-carousel owl-theme">
-          <CarouselItem
-            img="img/banner-1.png"
-            alt=""
-            textEl={
-              <>
-                <h2>До 12 апреля</h2>
-                <p>Мы снизили цены на детскую продукцию до 55%</p>
-                <a href="#">
-                  Перейти в&#160;<strong>Детские товары</strong>{" "}
-                  <img src="img/arrow-right.svg" alt="" />
-                </a>
-              </>
-            }
-          />
-          <CarouselItem
-            img="img/banner-1.png"
-            alt=""
-            textEl={
-              <>
-                <h2>До 12 апреля</h2>
-                <p>Мы снизили цены на детскую продукцию до 55%</p>
-                <a href="#">
-                  Перейти в&#160;<strong>Детские товары</strong>{" "}
-                  <img src="img/arrow-right.svg" alt="" />
-                </a>
-              </>
-            }
-          />
-          <CarouselItem
-            img="img/banner-1.png"
-            alt=""
-            textEl={
-              <>
-                <h2>До 12 апреля</h2>
-                <p>Мы снизили цены на детскую продукцию до 55%</p>
-                <a href="#">
-                  Перейти в&#160;<strong>Детские товары</strong>{" "}
-                  <img src="img/arrow-right.svg" alt="" />
-                </a>
-              </>
-            }
-          />
-        </div> */}
         <div className={`${styles.mainGraphics} flex`}>
           <div
             className={`${styles.mainGraphicsSoldInAMonth} ${styles.mainGraphicsItem}`}

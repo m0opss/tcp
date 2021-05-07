@@ -327,7 +327,8 @@ input, textarea
 body
 	margin: 0
 	font-family: "PT Sans", sans-serif
-	background: #f9f9f9
+	background: #F5F5F5
+
 a:hover
 	text-decoration: none
 
@@ -338,26 +339,32 @@ a:hover
 
 .container
 	max-width: 1190px
-	margin: auto
 	width: 100%
 	padding-right: 10px
 	padding-left: 10px
-	margin-right: auto
-	margin-left: auto
-	position: relative
+	margin: auto
+	// position: relative
 
 .owl-carousel .owl-stage-outer
 	z-index: -1
 .owl-theme .owl-nav.disabled+.owl-dots
 	text-align: right
-	margin-top: -55px !important
+	margin-top: -30px !important
 	margin-right: 60px
 	z-index: 16
+
+.owl-theme .owl-dots .owl-dot
+	width: 8px !important
+	height: 8px !important
+	margin:  0 5px
 .owl-theme .owl-dots .owl-dot span
-	background: #28323C !important
+	background: #A5E1FA !important
 	border-radius: 3px !important
+	width: 8px !important
+	height: 8px !important
+	margin: 0 !important
 .owl-theme .owl-dots .owl-dot.active span
-	background: #73879B !important
+	background: #73C8EB !important
 
 @media (max-width: 1200px)
 	.container

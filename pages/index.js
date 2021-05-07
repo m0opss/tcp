@@ -1,7 +1,7 @@
 import MainContainer from "../components/MainContainer";
 import MainHeader from "../components/MainHeader";
 import MainFooter from "../components/MainFooter";
-import MainCategories from "../components/Main/MainCategories";
+import MainLinks from "../components/Main/MainLinks";
 import MainBanner from "../components/Main/MainBanner";
 import Nav from "../components/Nav/Nav";
 
@@ -16,7 +16,7 @@ const Index = ({ items }) => {
       <div id={styles.main}>
         <div className="container">
           <div className="flex">
-            <MainCategories />
+            <MainLinks />
             <MainBanner />
           </div>
         </div>
