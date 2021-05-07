@@ -1,0 +1,243 @@
+#popular
+  margin-top: 55px
+  margin-bottom: 100px
+  h2
+    font-family: "ProximaNova"
+    font-weight: 600
+    font-size: 24px
+    color: #28323C
+    a
+      span
+        border-bottom: 1px solid #73879B
+        font-family: "ProximaNova"
+        font-weight: 600
+        font-size: 24px
+        color: #73879B
+        text-decoration: none
+.productItems .productItem .productItemPrice img
+  margin: 0
+.productItems
+  flex-wrap: wrap
+  margin-left: -15px
+  .productItem
+    position: relative
+    width: 345px
+    height: 476px
+    background: #FFFFFF
+    box-shadow: 0px 20px 25px rgba(215, 225, 235, 0.15), 0px 15px 20px rgba(215, 225, 235, 0.1), 0px 10px 15px rgba(215, 225, 235, 0.07), 0px 5px 5px rgba(215, 225, 235, 0.05)
+    border-radius: 15px
+    margin: 15px
+    padding: 30px
+    text-align: left
+    &:hover
+      .productItemBuyBlock
+        opacity: 1
+    ul
+      img
+        margin: 0
+    a
+      text-decoration: none
+      color: #28323C
+      img
+        margin: 48px 10px
+      h3
+        font-size: 16px
+        margin-top: 15px
+        margin-bottom: 0px
+    .productItemCatalogBut
+      margin-top: 35px
+      display: block
+      font-size: 12px
+      color: #73879B
+    .productItemBuyBlock
+      opacity: 0
+      position: absolute
+      width: 344px
+      height: 170px
+      left: 0px
+      top: 305px
+      background: #323C46
+      border-radius: 0px 0px 15px 15px
+      transition: all .2s ease
+      h4
+        width: 290px
+        height: 48px
+        font-weight: normal
+        font-size: 16px
+        line-height: 150%
+        color: #F9F9F9
+        margin: 10px auto
+      .productItemBuyBlockLink
+        width: 121px
+        height: 18px
+        font-weight: normal
+        font-size: 12px
+        color: #D7E1EB
+        flex: none
+        margin: 10px 0px
+        margin-left: 30px
+        display: block
+      ul
+        list-style: none
+        padding-left: 0px
+        text-align: center
+        li
+          width: 120px
+          margin-left: 20px
+          margin-top: 14px
+          img
+            max-width: 10px
+            margin: 0
+          a
+            height: 18px
+            font-weight: normal
+            font-size: 13px
+            color: #FFFFFF
+            margin: 0px 5px
+        .productItemBuyBlockButton
+          img
+            max-width: 15px
+          a
+            font-size: 14px
+            font-weight: 700
+    .productItemPrice
+      margin: 0
+      margin-top: 26px
+      font-size: 20px
+      color: #323C46
+      .productItemPriceCurrency
+        margin-top: 3px
+        height: 25px
+        width: 50%
+        img
+          margin-top: 3px
+          height: 25px
+        p
+          font-family: "ProximaNova"
+          font-weight: 700
+      .productItemPriceCryptocurrency
+        width: 50%
+        justify-content: flex-end
+        img
+          margin-top: 3px
+          height: 25px
+        p
+          font-family: "ProximaNova"
+          font-weight: 700
+    .productItemMore
+      text-align: center
+      margin-top: 41%
+      img
+        margin: 20px 0px
+      p
+        font-family: "ProximaNova"
+        font-weight: 600
+        font-size: 24px
+        color: #73879B
+        margin-bottom: 0px
+
+@media (max-width: 1200px)
+  .productItems
+    .productItem
+      width: 285px
+      height: 436px
+      a
+        img
+          max-width: 208px
+      .productItemPrice
+        margin: 0
+        margin-top: 19px
+      .productItemBuyBlock
+        top: 275px
+        width: 285px
+        h4
+          padding-left: 30px
+        ul
+          li
+            text-align: center
+            justify-content: center
+            margin-left: 11px
+            a
+              display: contents
+            img
+              margin-right: 2px
+
+@media (max-width: 992px)
+  #popular
+    padding: 0px 30px
+  .productItems .productItem
+    width: 307px
+    margin: auto
+    margin-bottom: 30px
+  .productItems .productItemMoreContent
+    display: none
+  .productItems .productItem .productItemBuyBlock
+    width: 307px
+    h4
+      padding-left: 20px
+
+@media (max-width: 768px)
+  .productItems .productItem
+    text-align: center
+    width: 213px
+    height: 350px
+    padding: 20px
+  .productItems .productItem a img
+    margin: 23px 10px
+    max-width: 122px
+  .productItems .productItem a h3
+    text-align: left
+    font-size: 14px
+    font-weight: 400
+  .productItems .productItem .productItemPrice img
+    margin: 0
+  .productItems .productItem .productItemPrice .productItemPriceCryptocurrency
+    margin-top: 3px
+  .productItems .productItem .productItemPrice .productItemPriceCryptocurrency p
+    font-size: 18px
+    font-weight: 700
+    margin-top: 2px
+    margin-bottom: 0px
+  .productItems .productItem .productItemPrice .productItemPriceCurrency p
+    font-size: 18px
+    font-weight: 700
+    margin-top: 2px
+    margin-bottom: 0px
+  .productItems .productItem .productItemBuyBlock
+    display: none
+
+@media (max-width: 576px)
+  #popular
+    padding: 0px
+    margin-top: 15px
+  #popular h2
+    font-size: 18px
+    margin-bottom: 15px
+  #popular h2 a
+    font-size: 18px
+  #popular h2 a img
+    max-width: 12px
+  .productItems .productItem
+    text-align: center
+    width: 165px
+    height: 244px
+    padding: 8px
+    margin-bottom: 15px
+  .productItems .productItem a img
+    margin: 7px 10px
+    max-width: 113px
+  .productItems .productItem .productItemCatalogBut
+    text-align: left
+    margin-top: 4px
+  .productItems .productItem .productItemPrice .productItemPriceCurrency img
+    margin-top: 3px
+    height: 14px
+  .productItems .productItem .productItemPrice .productItemPriceCurrency p
+    font-size: 10px
+  .productItems .productItem .productItemPrice .productItemPriceCryptocurrency img
+    margin-top: 3px
+    height: 14px
+  .productItems .productItem .productItemPrice .productItemPriceCryptocurrency p
+    font-size: 10px
+  .productItems .productItem .productItemPrice
+    margin-top: 37px

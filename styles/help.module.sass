@@ -1,0 +1,351 @@
+
+.txtMenu
+  width: 173px
+  height: 158px
+  background: #fff
+  box-shadow: 0px 20px 25px rgba(215, 225, 235, 0.15), 0px 15px 20px rgba(215, 225, 235, 0.1), 0px 10px 15px rgba(215, 225, 235, 0.07), 0px 5px 5px rgba(215, 225, 235, 0.05)
+  border-radius: 15px
+  ul
+    padding: 0px 18px
+    list-style: none
+    margin-top: 8px
+    margin-bottom: 0px
+    li:last-child
+      border-bottom: none
+    li
+      padding: 7px 0px
+      border-bottom: 1px solid #D7E1EB
+      a
+        display: block
+        height: 21px
+        font-weight: normal
+        font-size: 14px
+        color: #323C46
+    li.active
+      position: relative
+      a
+        font-weight: bold
+        color: #73C8EB
+      a:before
+        content: ""
+        width: 3px
+        height: 18px
+        background: #73C8EB
+        border-radius: 15px
+        display: block
+        position: absolute
+        left: -19px
+
+// help      
+#support
+  .supportBlock
+    width: 886px
+    h2
+      text-align: center
+      font-family: "ProximaNova"
+      font-weight: 600
+      font-size: 24px
+      color: #323C46
+      margin-bottom: 20px
+    .supportBlockSearch
+      padding: 13px 0px
+      text-align: center
+      a
+        text-decoration: none
+        position: relative
+        top: -1px
+        left: 30px
+      input
+        width: 568px
+        height: 40px
+        border: 1px solid #D7E1EB
+        border-radius: 5px
+        padding-left: 30px
+      button
+        background-color: #28323C
+        border: none
+        width: 40px
+        height: 40px
+        border-top-right-radius: 5px
+        border-bottom-right-radius: 5px
+        position: relative
+        left: -45px
+    .supportBlockList
+      ul
+        padding-left: 0px
+        list-style: none
+        margin-bottom: 0px
+        li
+          margin: 50px 40px 50px 40px
+          .supportBlockListImg
+            width: 64px
+            height: 64px
+            background: transparent
+            border: 2px solid #9182F0
+            box-sizing: border-box
+            border-radius: 10em
+            text-align: center
+            line-height: 3.4
+            margin-right: 25px
+          .supportBlockListTxt
+            h3
+              font-family: "ProximaNova"
+              font-weight: 600
+              font-size: 18px
+              color: #323C46
+            p
+              width: 303px
+              height: 48px
+              font-weight: normal
+              font-size: 16px
+              color: #323C46
+        li.active
+          .supportBlockListImg
+            background: #9182F0
+            border: 2px solid #9182F0
+          .supportBlockListTxt
+            h3
+              color: #73879B
+            p
+              color: #73879B
+    .supportBlockTxt
+      width: 886px
+      background: #fff
+      box-shadow: 0px 20px 25px rgba(215, 225, 235, 0.15), 0px 15px 20px rgba(215, 225, 235, 0.1), 0px 10px 15px rgba(215, 225, 235, 0.07), 0px 5px 5px rgba(215, 225, 235, 0.05)
+      border-radius: 15px
+      padding: 20px
+      margin-bottom: 80px
+      h3
+        font-family: "ProximaNova"
+        font-weight: 600
+        font-size: 24px
+        color: #323C46
+      ul
+        padding-left: 0px
+        list-style: none
+        margin-bottom: 0px
+        li
+          position: relative
+          font-weight: normal
+          font-size: 16px
+          color: #323C46
+          border-bottom: 1px solid #D7E1EB
+          padding: 15px 10px
+        li:before
+          content: ""
+          width: 3px
+          height: 18px
+          background: #73C8EB
+          border-radius: 15px
+          display: block
+          position: absolute
+          top: 17px
+          left: -5px
+
+
+// справка
+#reference
+  .referenceBlock
+    width: 886px
+    margin: 0px 50px
+    h2
+      text-align: center
+      font-family: "ProximaNova"
+      font-weight: 600
+      font-size: 24px
+      color: #323C46
+      margin-bottom: 20px
+    p
+      font-weight: normal
+      font-size: 16px
+      color: #323C46
+    .referenceBlockList
+      ul
+        padding-left: 0px
+        list-style: none
+        margin-bottom: 0px
+        margin-right: 140px
+        li
+          h3
+            font-family: "ProximaNova"
+            font-weight: 600
+            font-size: 18px
+            color: #323C46
+            &:before
+              content: ""
+              width: 6px
+              height: 24px
+              border: 1px solid #9182F0
+              box-sizing: border-box
+              border-radius: 15px
+              margin-right: 35px
+        li.active
+
+    .referenceBlockTxt
+      width: 886px
+      background: #fff
+      box-shadow: 0px 20px 25px rgba(215, 225, 235, 0.15), 0px 15px 20px rgba(215, 225, 235, 0.1), 0px 10px 15px rgba(215, 225, 235, 0.07), 0px 5px 5px rgba(215, 225, 235, 0.05)
+      border-radius: 15px
+      padding: 25px 30px
+      margin-top: 40px
+      margin-bottom: 80px
+      h3
+        font-family: "ProximaNova"
+        font-weight: 600
+        font-size: 18px
+        color: #323C46
+      p
+        font-weight: normal
+        font-size: 16px
+        color: #323C46
+
+// ВОПРОС-ОТВЕТ
+#qa
+  .qaBlock
+    margin-left: 50px
+    h2
+      font-family: "ProximaNova"
+      font-weight: 600
+      font-size: 24px
+      text-align: center
+      color: #323C46
+    .qaItems
+      width: 885px
+      background: #fff
+      box-shadow: 0px 20px 25px rgba(215, 225, 235, 0.15), 0px 15px 20px rgba(215, 225, 235, 0.1), 0px 10px 15px rgba(215, 225, 235, 0.07), 0px 5px 5px rgba(215, 225, 235, 0.05)
+      border-radius: 15px
+      padding: 45px 29px
+      margin-bottom: 73px
+      .qaItem,
+      .qaItemAnswer
+        margin-bottom: 35px
+        .qaItemTitle,
+        .qaItemAnswerTitle
+          .qaItemTitleImg,
+          .qaItemAnswerTitleImg
+            border-radius: 10em
+            width: 45px
+            height: 45px
+            text-align: center
+            line-height: 2.4
+          .qaItemTitleImg
+            background: #73879B
+          .qaItemAnswerTitleImg
+            background: #323C46
+          p
+            margin: auto
+            margin-left: 21px
+            font-size: 16px
+            color: #323C46
+        p
+          font-weight: normal
+          font-size: 16px
+          color: #323C46
+          margin-left: 65px
+      .qaItemAnswer
+        margin-left: 40px
+    .qaForm
+      margin-bottom: 125px
+      h3
+        font-family: "ProximaNova"
+        font-weight: 600
+        font-size: 24px
+        text-align: left
+        color: #323C46
+        margin-bottom: 40px
+      form
+        position: relative
+        .qaFormInput
+          margin-right: 45px
+          p
+            margin-bottom: 0px
+            font-weight: normal
+            font-size: 16px
+            color: #73879B
+          input
+            height: 48px
+            background: #F9F9F9
+            border: 1px solid #D7E1EB
+            box-sizing: border-box
+            border-radius: 8px
+          .qaFormInput1
+            width: 282px
+          .qaFormInput2
+            width: 558px
+        button
+          padding: 5px 20px 6px
+          width: 130px
+          height: 36px
+          background: #82D2F5
+          border-radius: 8px
+          border: none
+          font-family: "ProximaNova"
+          font-weight: 400
+          font-size: 18px
+          color: #F9F9F9
+          margin-top: 30px
+          position: absolute
+          right: 45px
+
+// благотворительность
+#charityWork
+  .charityWorkBlock
+    margin-left: 50px
+    width: 884px
+    h2
+      font-family: "ProximaNova"
+      font-weight: 600
+      font-size: 24px
+      text-align: center
+      color: #323C46
+    .charityWorkContent
+      width: 884px
+      height: 478px
+      background: #fff
+      box-shadow: 0px 20px 25px rgba(215, 225, 235, 0.15), 0px 15px 20px rgba(215, 225, 235, 0.1), 0px 10px 15px rgba(215, 225, 235, 0.07), 0px 5px 5px rgba(215, 225, 235, 0.05)
+      border-radius: 15px
+      padding: 56px 90px
+      margin-bottom: 100px
+      .charityWorkContentScore
+        width: 356px
+        height: 366px
+        background: #323C46
+        border-radius: 15px
+        margin-right: 34px
+      .charityWorkContentForm
+        width: 445px
+        h3
+          font-family: "ProximaNova"
+          font-weight: 600
+          font-size: 24px
+          color: #000
+        p
+          font-weight: normal
+          font-size: 14px
+          color: #000
+          margin-bottom: 83px
+        .charityWorkContentFormInputs
+          display: grid
+          input,
+          select
+            background: #F9F9F9
+            color: #A5B4C3
+            margin: 9px auto
+            border: 1px solid #D7E1EB
+            box-sizing: border-box
+            border-radius: 8px
+            padding: 16px 6px
+            width: 267px
+            height: 36px
+          button
+            padding: 7px 20px 6px
+            width: 130px
+            height: 36px
+            background: #82D2F5
+            border-radius: 8px
+            border: none
+            font-family: "ProximaNova"
+            font-weight: 400
+            font-size: 18px
+            color: #F9F9F9
+            margin: 15px auto

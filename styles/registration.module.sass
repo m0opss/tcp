@@ -1,0 +1,146 @@
+#registration
+  background: #323C46
+  height: 100vh
+  .registrationItem
+    .registrationItemForm
+      position: absolute
+      width: 540px
+      height: 559px
+      left: calc(50% - 540px/2 + 190px)
+      top: calc(50% - 559px/2 - 28.5px)
+      background: #FFFFFF
+      border-radius: 25px
+      padding: 30px
+      h3
+        width: 148px
+        height: 36px
+        font-family: "ProximaNova"
+        font-weight: 600
+        font-size: 24px
+        color: #323C46
+        margin-bottom: 15px
+      .registrationItemFormUser
+        margin-bottom: 0px
+        p
+          font-weight: normal
+          font-size: 16px
+          color: #323C46
+          margin-right: 15px
+        a
+          font-weight: bold
+          font-size: 16px
+          color: #73C8EB
+      form
+        p
+          height: 24px
+          font-family: "ProximaNova"
+          font-weight: 600
+          font-size: 18px
+          color: #73879B
+          margin-bottom: 9px
+        input
+          background: #F9F9F9
+          border: 1px solid #D7E1EB
+          box-sizing: border-box
+          border-radius: 8px
+          margin-bottom: 10px
+          width: 300px
+          height: 40px
+        .flex
+          margin-bottom: 10px
+          a
+            width: 115px
+            height: 24px
+            font-weight: bold
+            font-size: 16px
+            color: #73C8EB
+          p
+            font-weight: 400
+            font-size: 16px
+            color: #323c46
+            margin-right: 15px
+        button
+          padding: 7px 20px 6px
+          background: #323C46
+          border-radius: 8px
+          font-family: "ProximaNova"
+          font-weight: 600
+          font-size: 18px
+          color: #F9F9F9
+          border: none
+      .registrationItemFormPolicy
+        width: 430px
+        height: 72px
+        font-weight: normal
+        font-size: 16px
+        color: #28323C
+        margin-top: 10px
+        margin-bottom: 0px
+        a
+          font-weight: bold
+          font-size: 16px
+          color: #73C8EB
+  .registrationItem1
+    width: 40%
+    height: 100vh
+    text-align: right
+    a
+      img
+        width: 240px
+        position: relative
+        top: 43%
+      .registrationItem1Mobile
+        display: none
+  .registrationItem2
+    width: 60%
+
+@media (max-width: 992px)
+  #registration
+    .flex-mobile
+      display: block
+    .registrationItem
+      .registrationItemForm
+        width: 510px
+        height: 584px
+        left: calc(50% - 510px/2)
+        top: calc(50% - 584px/2)
+        .registrationItemFormUser
+          margin-bottom: 10px
+    .registrationItem1
+      width: auto
+      height: auto
+      text-align: center
+      a
+        img
+          position: absolute
+          max-width: 130px
+          height: 56px
+          left: calc(50% - 130px/2)
+          top: calc(50% - 56px/2 - 360px)
+    .registrationItem2
+      width: auto
+
+@media (max-width: 768px)
+  #registration
+    background: #f9f9f9
+    .registrationItem
+      .registrationItemForm
+        width: 350px
+        padding: 0px
+        left: calc(50% - 350px/2)
+        top: calc(50% - 480px/2)
+        background: transparent
+        border-radius: 0px
+        .registrationItemFormPolicy
+          width: 345px
+          height: 100px
+    .registrationItem1
+      a
+        .registrationItem1Desktop
+          display: none
+        .registrationItem1Mobile
+          display: block
+          width: 130px
+          height: 56px
+          left: calc(50% - 130px/2)
+          top: calc(50% - 56px/2 - 320px)
