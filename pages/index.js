@@ -3,7 +3,7 @@ import MainHeader from "../components/MainHeader";
 import MainFooter from "../components/MainFooter";
 import MainCategories from "../components/Main/MainCategories";
 import MainBanner from "../components/Main/MainBanner";
-import MainNav from "../components/Main/MainNav";
+import Nav from "../components/Nav/Nav";
 
 import styles from "../styles/Main/main.module.sass";
 import Popular from "../components/Main/Popular";
@@ -12,7 +12,7 @@ const Index = ({ items }) => {
   return (
     <MainContainer keywords={"main page"}>
       <MainHeader />
-      <MainNav />
+      <Nav />
       <div id={styles.main}>
         <div className="container">
           <div className="flex">
