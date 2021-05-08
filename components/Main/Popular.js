@@ -12,44 +12,44 @@ const ProductItem = ({
   cost_dol,
   cost_btc,
 }) => (
-  <div className={`${styles.productItem}`}>
-    <A href={link}>
+  <div href={link} className={styles.productItem}>
+    <div className={styles.productItemImgContainer}>
       <img src={img} alt={alt} />
-      <h3>{name}</h3>
-      <A href={categoryLink} className={`${styles.productItemCatalogBut}`}>
-        {category}
-      </A>
-      <div className={`${styles.productItemPrice} flex`}>
-        <div className={`${styles.productItemPriceCurrency} flex`}>
-          <img src="img/dollar.svg" alt="" />
-          <p>{cost_dol}</p>
-        </div>
-        <div className={`${styles.productItemPriceCryptocurrency} flex`}>
-          <img src="img/bitcoin.svg" alt="" />
-          <p>{cost_btc}</p>
-        </div>
+    </div>
+    <h3 className={styles.productItemTitle}>{name}</h3>
+    <div className={styles.productItemRate}>
+      <div className={styles.productItemRateStars}>
+        <span class={styles.productItemRateStarsActive}></span>
+        <span class={styles.productItemRateStarsActive}></span>
+        <span class={styles.productItemRateStarsActive}></span>
+        <span></span>
+        <span></span>
       </div>
-      <div className={`${styles.productItemBuyBlock}`}>
-        <h4>{name}</h4>
-        <A href="#" className={`${styles.productItemBuyBlockLink}`}>
-          {category}
-        </A>
-        <ul className={`flex`}>
-          <li className={`flex`}>
-            <img src="img/bookmarkItem.svg" alt="" />
-            <a href="#">В избранное</a>
-          </li>
-          <li className={`flex`}>
-            <img src="img/compareScalesItem.svg" alt="" />
-            <a href="#">Сравнить</a>
-          </li>
-          <li className={`${styles.productItemBuyBlockButton} flex`}>
-            <img src="img/cartItem.svg" alt="" />
-            <a href="#">Купить</a>
-          </li>
-        </ul>
-      </div>
-    </A>
+      <p className={styles.productItemRateDec}>3.6</p>
+    </div>
+    <div className={styles.productItemAuc}>
+      <img src="img/auction.svg" alt="" />
+      <p>Аукционный лот</p>
+    </div>
+    <div className={styles.productItemPrice}>
+      <p>Цена в нац. валюте</p>
+      <p>Цена в TPC Credit</p>
+    </div>
+    <img
+      className={styles.productItemFavoritesIcon}
+      src="img/MainItemFavoritesIcon.svg"
+      alt=""
+    />
+    <img
+      className={styles.productItemCompareIcon}
+      src="img/MainItemCompareIcon.svg"
+      alt=""
+    />
+    <img
+      className={styles.productItemCartIcon}
+      src="img/MainItemCartIcon.svg"
+      alt=""
+    />
   </div>
 );
 
@@ -61,12 +61,12 @@ const Popular = ({ items }) => {
           <h2>
             Популярные{" "}
             <a href="#">
-              <span>Товары и услуги</span>{" "}
+              <span>товары и услуги</span>
               <img src="img/dropdownPopular.svg" alt="" />
             </a>
           </h2>
 
-          <div className={`${styles.productItems} flex`}>
+          <div className={`${styles.productItems}`}>
             {items.map((item) => (
               <ProductItem
                 key={item.id}
@@ -80,14 +80,14 @@ const Popular = ({ items }) => {
                 cost_btc={item.cost_btc}
               />
             ))}
-            <div className={`${styles.productItem}`}>
+            {/* <div className={`${styles.productItem}`}>
               <a href="#">
                 <div className={`${styles.productItemMore}`}>
                   <img src="img/ellipse.svg" alt="" />
                   <p>Показать еще</p>
                 </div>
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

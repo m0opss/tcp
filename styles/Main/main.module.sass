@@ -2,6 +2,7 @@
   padding-top: 55px
 #main .mainLinks
   width: 270px
+  height: 410px
   ul
     list-style: none
     padding-left: 0px
@@ -128,37 +129,86 @@
       line-height: 150%
       margin-top: 5px
 
-#main .mainBanner .mainGraphics
-  margin-top: 80px
-#main .mainBanner .mainGraphics .mainGraphicsItem
-  background: #FFFFFF
-  box-shadow: 0px 20px 25px rgba(215, 225, 235, 0.15), 0px 15px 20px rgba(215, 225, 235, 0.1), 0px 10px 15px rgba(215, 225, 235, 0.07), 0px 5px 5px rgba(215, 225, 235, 0.05)
-  border-radius: 15px
-  padding: 25px
-  width: 400px
-  height: 273px
-#main .mainBanner .mainGraphics .mainGraphicsItem h3
-  font-family: "ProximaNova"
-  font-style: normal
-  font-weight: 600
-  font-size: 18px
-#main .mainBanner .mainGraphics .mainGraphicsItem .mainGraphicsItemName
-  list-style: none
-  padding-left: 0px
-  margin-bottom: 0px
+#main .mainBanner .thumb
+  background: white
+  width: 100%
+  height: 120px
+
+#main .mainGraphics
+  margin-top: 30px
   display: flex
-  justify-content: flex-end
-#main .mainBanner .mainGraphics .mainGraphicsItem .mainGraphicsItemName li
-  margin: 0px 5px
-#main .mainBanner .mainGraphics .mainGraphicsItem .mainGraphicsItemName li .mainGraphicsItemPoint
-  display: block
-  width: 4px
-  height: 4px
-  margin: 0px 4px
-  margin-top: 10px
-  margin-right: 5px
-#main .mainBanner .mainGraphics .mainGraphicsSoldInAMonth
-  margin-right: 30px
+  align-items: center
+  .mainGraphicsItem
+    height: 215px
+    width: 370px
+    background: #fff
+    box-shadow: 1px 1px 6px rgba(215, 225, 235, 0.18)
+    border-radius: 15px
+    &:nth-child(2)
+      margin: 0 30px
+    .mainGraphicsItemTitle
+      width: 100%
+      margin-top: 20px
+      text-align: center
+      font-family: Proxima Nova
+      font-style: normal
+      font-weight: 600
+      font-size: 18px
+      line-height: 150%
+      color: #28323C
+    .mainGraphicsItemData
+      height: 93px
+      width: 180px
+      border: 1px solid #33333325
+      margin: 5px auto
+    .mainGraphicsItemBtn
+      width: 190px
+      height: 35px
+      margin: 0 auto
+      background: #9182F0
+      border-radius: 6px
+      font-family: Proxima Nova
+      font-style: normal
+      font-weight: 600
+      font-size: 18px
+      line-height: 150%
+      text-align: center
+      color: #F9F9F9
+      display: flex
+      align-items: center
+      justify-content: center
+
+  // #main .mainBanner .mainGraphics
+//   margin-top: 80px
+// #main .mainBanner .mainGraphics .mainGraphicsItem
+//   background: #FFFFFF
+//   box-shadow: 0px 20px 25px rgba(215, 225, 235, 0.15), 0px 15px 20px rgba(215, 225, 235, 0.1), 0px 10px 15px rgba(215, 225, 235, 0.07), 0px 5px 5px rgba(215, 225, 235, 0.05)
+//   border-radius: 15px
+//   padding: 25px
+//   width: 400px
+//   height: 273px
+// #main .mainBanner .mainGraphics .mainGraphicsItem h3
+//   font-family: "ProximaNova"
+//   font-style: normal
+//   font-weight: 600
+//   font-size: 18px
+// #main .mainBanner .mainGraphics .mainGraphicsItem .mainGraphicsItemName
+//   list-style: none
+//   padding-left: 0px
+//   margin-bottom: 0px
+//   display: flex
+//   justify-content: flex-end
+// #main .mainBanner .mainGraphics .mainGraphicsItem .mainGraphicsItemName li
+//   margin: 0px 5px
+// #main .mainBanner .mainGraphics .mainGraphicsItem .mainGraphicsItemName li .mainGraphicsItemPoint
+//   display: block
+//   width: 4px
+//   height: 4px
+//   margin: 0px 4px
+//   margin-top: 10px
+//   margin-right: 5px
+// #main .mainBanner .mainGraphics .mainGraphicsSoldInAMonth
+//   margin-right: 30px
 
 .owl-carousel .owl-stage-outer
   z-index: -1

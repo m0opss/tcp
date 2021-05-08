@@ -4,12 +4,11 @@ import MainFooter from "../components/MainFooter";
 import MainLinks from "../components/Main/MainLinks";
 import MainBanner from "../components/Main/MainBanner";
 import MainAuthForm from "../components/Main/MainAuthForm";
+import MainGraphics from "../components/Main/MainGraphics";
 import Nav from "../components/Nav/Nav";
 
 import styles from "../styles/Main/main.module.sass";
 import Popular from "../components/Main/Popular";
-
-
 
 const Index = ({ items }) => {
   return (
@@ -23,6 +22,7 @@ const Index = ({ items }) => {
             <MainBanner />
             <MainAuthForm />
           </div>
+          <MainGraphics />
         </div>
       </div>
       <Popular items={items} />
@@ -30,7 +30,36 @@ const Index = ({ items }) => {
     </MainContainer>
   );
 };
-
+{
+  /* <div className={`${styles.mainGraphics} flex`}>
+          <div
+            className={`${styles.mainGraphicsSoldInAMonth} ${styles.mainGraphicsItem}`}
+          >
+            <h3>Продано за месяц</h3>
+            <ul className={`${styles.mainGraphicsItemName}`}>
+              <li className="flex">
+                <div
+                  className={`${styles.mainGraphicsItemPoint}`}
+                  style={{ background: "#73C8EB" }}
+                ></div>
+                Товары
+              </li>
+              <li className="flex">
+                <div
+                  className={`${styles.mainGraphicsItemPoint}`}
+                  style={{ background: "#9182F0" }}
+                ></div>
+                Услуги
+              </li>
+            </ul>
+          </div>
+          <div
+            className={`${styles.mainGraphicsUserRevenue} ${styles.mainGraphicsItem}`}
+          >
+            <h3>Доход пользователей</h3>
+          </div>
+        </div> */
+}
 export default Index;
 
 export async function getStaticProps(context) {
@@ -47,7 +76,7 @@ const test_arr = [
   {
     id: 1,
     img: "img/prod-1.png",
-    name: "Ноутбук Samsung B6-E54312",
+    name: "Ноутбук Samsung B6-E54312 B6-E54312 B6-E54312",
     category: "Компьютерная техника",
     categoryLink: "#",
     cost_dol: "24",
