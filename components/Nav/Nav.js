@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import A from "../A";
 import styles from "../../styles/Main/nav.module.sass";
 import NavSearch from "./NavSearch";
@@ -6,8 +8,11 @@ import NavCategoriesBlock from "./NavCategoriesBlock";
 import MenuMobileBlock from "./MenuMobileBlock";
 
 const Nav = ({}) => {
+  const [menuIsOpen, setMenuOpen] = useState(false);
+  const [catIsOpen, setCatOpen] = useState(false);
+
   const onClickMenuMobile = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     document
       .getElementsByClassName("menuMobile")[0]
       .classList.toggle("menuMobile_active");
@@ -17,11 +22,16 @@ const Nav = ({}) => {
   };
 
   const onClickCategoriesButton = (e) => {
+    setCatOpen((catIsOpen) => !catIsOpen);
     e.preventDefault();
-    console.log(e.target);
     document
       .getElementsByClassName("navCategoriesBlock")[0]
       .classList.toggle("navCategoriesBlock_active");
+  };
+
+  const handleClickMenu = (target) => {
+    setMenuOpen((menuIsOpen) => !menuIsOpen);
+    onClickMenuMobile(target);
   };
 
   return (
@@ -31,18 +41,44 @@ const Nav = ({}) => {
           <MenuMobileBlock />
           <NavCategoriesBlock />
           <div className={`${styles.navMainBlock}`}>
-            <img
-              src="img/menu-mobile.svg"
-              className={`${styles.menuMobile} menuMobile`}
-              alt=""
-            />
+            {menuIsOpen ? (
+              <img
+                src="img/menu-mobile-active.svg"
+                width="18"
+                height="18"
+                className={`${styles.menuMobile} ${styles.active} menuMobile`}
+                onClick={handleClickMenu}
+              />
+            ) : (
+              <img
+                src="img/menu-mobile.svg"
+                className={`${styles.menuMobile} ${styles.active} menuMobile`}
+                onClick={handleClickMenu}
+              />
+            )}
+
             <div className={`${styles.navCategories}`}>
               <div
                 onClick={onClickCategoriesButton}
                 className={`${styles.navCategoriesContent} navCategoriesButton flex`}
               >
-                <img src="img/catalog.svg" alt="" />
-                <p>Каталог</p>
+                {catIsOpen ? (
+                  <>
+                    <img
+                      width="22"
+                      height="27"
+                      src="img/menu-mobile-active.svg"
+                      alt=""
+                    />
+                    <p style={{ color: "#41D8C2" }}>Каталог</p>
+                  </>
+                ) : (
+                  <>
+                    <img src="img/catalog.svg" alt="" />
+                    <p>Каталог</p>
+                  </>
+                )}
+
                 <img
                   src="img/arrow-down.svg"
                   className={`${styles.navCategoriesButtonMore}`}

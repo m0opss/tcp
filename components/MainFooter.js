@@ -20,32 +20,32 @@ const MainFooter = () => {
         <div className="container">
           <div className="flex">
             <FooterItem
-              title="TCP MARKET"
+              title="Финансы"
               content={{
-                "Личный ассистент": "#",
-                "О проекте": "/about",
-                Контакты: "/contacts",
-                Анонсы: "#",
-                Справка: "/info",
+                Инвестирование: "#",
+                Кредитование: "/about",
+                Страхование: "/contacts",
+                "De-Fi": "#",
+                Торговля: "/info",
+                "Открыть счет": "/info",
               }}
             />
             <FooterItem
-              title="Аккаунт"
+              title="TCP Company"
               content={{
-                "Мой кабинет": "/account",
-                Сохраненные: "/favorites",
-                Сравнения: "/comparison",
-                Корзина: "/cart",
-                Валюты: "#",
+                "О компании": "/account",
+                Благотворительность: "/favorites",
+                Справка: "/comparison",
+                Поддержка: "/cart",
               }}
             />
             <FooterItem
-              title="Условия"
+              title="TCP Магазин"
               content={{
                 Конфиденциальность: "#",
-                "Цены и комиссии": "/price",
-                "Доставка и возврат": "#",
                 Cookies: "#",
+                "Доставка и возврат": "#",
+                "Цены и комиссии": "/price",
               }}
             />
             <div className={styles.footerItem} style={{ paddingLeft: "130px" }}>
@@ -82,23 +82,8 @@ const MainFooter = () => {
             </div>
           </div>
           <div className={`${styles.footerBottom} flex`}>
-            <div className={`${styles.footerBottom1} flex`}>
-              <a href="#">Выгодные условия клиентам</a>
-              <ul>
-                <li>
-                  <img src="img/advcash.svg" alt="" />
-                </li>
-                <li>
-                  <img src="img/visa.svg" alt="" />
-                </li>
-                <li>
-                  <img src="img/mastercard.svg" alt="" />
-                </li>
-              </ul>
-            </div>
-            <div className={`${styles.footerBottom2}`}>
-              <p>TCP MARKET © Copyright 2022</p>
-            </div>
+            <p>© Trade Change Place</p>
+            <p>Все права защищены.</p>
           </div>
         </div>
       </footer>

@@ -1,45 +1,70 @@
 #header
 	background-color: #323C46
 	height: 52px
+	.container
+		height: 100%
+	.headerWrapper
+		width: 100%
+		display: flex
+		align-items: center
+		height: 100%
 	.headerLogo
-		padding: 14px 0px
+		padding: 6px 0px
 		width: 20%
+		height: 100%
 		img
 			width: 94px
-	.headerCurrency1
-		width: 20%
-		.flex
-			justify-content: center
-		p
-			text-align: center
-	.headerCurrency2
-		width: 41%
-		.flex
-			justify-content: left
-		p
-			text-align: left
-			margin-left: 25px
+
+	.headerCurrencies
+		display: flex
+		height: 100%
+		align-items: center
+		padding-left: 6%
+		.headerCurrency + .headerCurrency
+			margin: 0 7px 0 32px
 	.headerCurrency
 		color: #F6F7FB
-		padding: 11px 0px
+		display: flex
+		img
+			display: block
+		p, span
+			color: #D7E1EB
+			line-height: 100%
+		.bitcoinLogo
+			display: block
+			margin-right: 17px
+			margin-top: 2px
 		.flex
-			img
-				display: block
-				max-height: 18px
-				margin-right: 5px
-				margin-top: 4px
+			justify-content: center
+			flex-direction: column
+			margin-right: 5px
 			p
 				margin-left: 0px
+				margin-bottom: 7px
+				font-size: 13px
+			span
+				line-height: 100%
+				font-size: 11px
 				margin-bottom: 0px
-				font-size: 16px
-		p
-			font-size: 12px
-			margin-bottom: 0px
-			strong
-				color: #3CC8B4
+				padding-left: 9px
+				position: relative
+				img
+					position: absolute
+					top: 0px
+					left: -4px
+				strong
+					color: #3CC8B4
+
+	// .headerCurrency2
+	// 	width: 41%
+	// 	.flex
+	// 		justify-content: left
+	// 	p
+	// 		text-align: left
+	// 		margin-left: 25px
 	.headerMenu
 		color: #F6F7FB
-		padding: 8px 0px
+		padding-left: 21%
 		ul
 			list-style: none
 			padding-left: 0px

@@ -1,58 +1,92 @@
+import { useState } from "react";
 import styles from "../styles/header.module.sass";
 import A from "./A";
 
-const MainHeader = () => {
+const HeaderCurrenciesItem = ({ className, title, value, percent }) => (
+  <div className={`${styles.headerCurrency} ${className}`}>
+    <img
+      className={styles.bitcoinLogo}
+      width="16"
+      height="24"
+      src="img/bitcoin-header.svg"
+    />
+    <div className={`flex ${styles.flex}`}>
+      <p>{title}</p>
+      <span>
+        <img src="img/topArrowHeader.svg" />
+        {value.toFixed(4)}{" "}
+        <strong>{percent > 0 ? `+ ${percent}` : percent}%</strong>
+      </span>
+    </div>
+    <img
+      className={styles.headerCurrencyDropArr}
+      src="img/dropdown.svg"
+      alt=""
+    />
+  </div>
+);
+
+const HeaderCurrencies = ({}) => (
+  <div className={styles.headerCurrencies}>
+    <HeaderCurrenciesItem
+      className={styles.headerCurrency1}
+      title="TCP Credit"
+      value={0}
+      percent={0.03}
+    />
+    <HeaderCurrenciesItem
+      className={styles.headerCurrency2}
+      title="TCP Credit"
+      value={0.053}
+      percent={15}
+    />
+    <HeaderCurrenciesItem
+      className={styles.headerCurrency3}
+      title="TCP Finance"
+      value={0.053}
+      percent={15}
+    />
+  </div>
+);
+
+const AccountMenu = ({ isAuth, setIsAuth }) => (
+  <div className={styles.headerMenu}>
+    {isAuth ? (
+      <ul className="flex">
+        <li>
+          <A className={styles.headerMenuLogIn} href="#">
+            <img src="img/log-in.svg" alt="" />
+            <p>Огого</p>
+          </A>
+        </li>
+      </ul>
+    ) : (
+      <ul className="flex">
+        <li onClick={() => setIsAuth(isAuth => !isAuth)}>
+          <A className={styles.headerMenuLogIn} href="#">
+            <img src="img/log-in.svg" alt="" />
+            <p>Войти</p>
+          </A>
+        </li>
+      </ul>
+    )}
+  </div>
+);
+
+const MainHeader = ({}) => {
+  const [isAuth, setIsAuth] = useState(false);
   return (
     <>
       <header id={styles.header}>
-        <div className="container">
-          <div className="flex">
+        <div className={`${styles.container} container`}>
+          <div className={styles.headerWrapper}>
             <div className={styles.headerLogo}>
               <a href="/">
                 <img src="img/logo.svg" alt="" />
               </a>
             </div>
-            <div
-              className={`${styles.headerCurrency} ${styles.headerCurrency1}`}
-            >
-              <div className={`flex ${styles.flex}`}>
-                <img src="img/bitcoin-header.svg" alt="" />
-                <p>TCP Cent</p>
-                <img src="img/dropdown.svg" alt="" />
-              </div>
-              <p>
-                0.053 <strong>+15%</strong>
-              </p>
-            </div>
-            <div
-              className={`${styles.headerCurrency} ${styles.headerCurrency2}`}
-            >
-              <div className={`flex ${styles.flex}`}>
-                <img src="img/bitcoin-header.svg" alt="" />
-                <p>TCP Credit</p>
-                <img src="img/dropdown.svg" alt="" />
-              </div>
-              <p>
-                1.53 <strong>+8.4%</strong>
-              </p>
-            </div>
-            <div className={styles.headerMenu}>
-              <ul className="flex">
-                <li>
-                  <a href="#">
-                    <img src="img/messages.svg" alt="" />
-                    <p>Уведомления</p>
-                    <span>21</span>
-                  </a>
-                </li>
-                <li>
-                  <A className={styles.headerMenuLogIn} href="/auth">
-                    <img src="img/log-in.svg" alt="" />
-                    <p>Войти</p>
-                  </A>
-                </li>
-              </ul>
-            </div>
+            <HeaderCurrencies />
+            <AccountMenu isAuth={isAuth} setIsAuth={setIsAuth} />
           </div>
         </div>
       </header>
