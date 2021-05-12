@@ -1,15 +1,10 @@
+import Slider from "react-slick";
 import A from "../A";
 import styles from "../../styles/Main/main.module.sass";
-
-// import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import Head from "next/head";
-import dynamic from "next/dynamic";
-
-const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
-  ssr: false,
-});
+import React from "react";
 
 const CarouselItem = ({ img, alt, textEl }) => (
   <div className={`${styles.mainBannerItem} flex`}>
@@ -21,103 +16,158 @@ const CarouselItem = ({ img, alt, textEl }) => (
 );
 
 const MainBanner = ({ children, keywords }) => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+  const settings_thumbs = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    swipeToSlide: true,
+    focusOnSelect: true
+  };
+
+  const [nav1, setNav1] = React.useState(null);
+  const [nav2, setNav2] = React.useState(null);
+  let slider1 = [];
+  let slider2 = [];
+
+  React.useEffect(() => {
+    setNav1(slider1);
+    setNav2(slider2);
+  }, [slider1, slider2]);
+
   return (
     <>
       <Head>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       </Head>
       <div className={`${styles.mainBanner}`}>
-        <OwlCarousel
-          items={1}
-          className={`${styles["owl-carousel"]} ${styles["owl-theme"]} owl-theme`}
-          loop
-          margin={8}
-        >
-          <CarouselItem
-            img="img/banner-1.png"
-            alt=""
-            textEl={
-              <>
-                <h2>До 12 апреля</h2>
-                <p>Мы снизили цены на детскую продукцию до 55%</p>
-                <a href="#">
-                  Перейти в&#160;<strong>Детские товары</strong>{" "}
-                  <img src="img/arrow-right.svg" alt="" />
-                </a>
-              </>
-            }
-          />
-          <CarouselItem
-            img="img/banner-1.png"
-            alt=""
-            textEl={
-              <>
-                <h2>До 12 апреля</h2>
-                <p>Мы снизили цены на детскую продукцию до 55%</p>
-                <a href="#">
-                  Перейти в&#160;<strong>Детские товары</strong>{" "}
-                  <img src="img/arrow-right.svg" alt="" />
-                </a>
-              </>
-            }
-          />
-          <CarouselItem
-            img="img/banner-1.png"
-            alt=""
-            textEl={
-              <>
-                <h2>До 12 апреля</h2>
-                <p>Мы снизили цены на детскую продукцию до 55%</p>
-                <a href="#">
-                  Перейти в&#160;<strong>Детские товары</strong>{" "}
-                  <img src="img/arrow-right.svg" alt="" />
-                </a>
-              </>
-            }
-          />
-          <CarouselItem
-            img="img/banner-1.png"
-            alt=""
-            textEl={
-              <>
-                <h2>До 12 апреля</h2>
-                <p>Мы снизили цены на детскую продукцию до 55%</p>
-                <a href="#">
-                  Перейти в&#160;<strong>Детские товары</strong>{" "}
-                  <img src="img/arrow-right.svg" alt="" />
-                </a>
-              </>
-            }
-          />
-          <CarouselItem
-            img="img/banner-1.png"
-            alt=""
-            textEl={
-              <>
-                <h2>До 12 апреля</h2>
-                <p>Мы снизили цены на детскую продукцию до 55%</p>
-                <a href="#">
-                  Перейти в&#160;<strong>Детские товары</strong>{" "}
-                  <img src="img/arrow-right.svg" alt="" />
-                </a>
-              </>
-            }
-          />
-          <CarouselItem
-            img="img/banner-1.png"
-            alt=""
-            textEl={
-              <>
-                <h2>До 12 апреля</h2>
-                <p>Мы снизили цены на детскую продукцию до 55%</p>
-                <a href="#">
-                  Перейти в&#160;<strong>Детские товары</strong>{" "}
-                  <img src="img/arrow-right.svg" alt="" />
-                </a>
-              </>
-            }
-          />
-        </OwlCarousel>
+        <div className="mainSlider">
+          <Slider
+            asNavFor={nav2}
+            ref={(slider) => (slider1 = slider)}
+            {...settings}
+          >
+            <CarouselItem
+              img="img/banner-1.png"
+              alt=""
+              textEl={
+                <>
+                  <h2>До 12 апреля</h2>
+                  <p>Мы снизили цены на детскую продукцию до 55%</p>
+                  <a href="#">
+                    Перейти в&#160;<strong>Детские товары</strong>{" "}
+                    <img src="img/arrow-right.svg" alt="" />
+                  </a>
+                </>
+              }
+            />
+            <CarouselItem
+              img="img/banner-1.png"
+              alt=""
+              textEl={
+                <>
+                  <h2>До 12 апреля</h2>
+                  <p>Мы снизили цены на детскую продукцию до 55%</p>
+                  <a href="#">
+                    Перейти в&#160;<strong>Детские товары</strong>{" "}
+                    <img src="img/arrow-right.svg" alt="" />
+                  </a>
+                </>
+              }
+            />
+            <CarouselItem
+              img="img/banner-1.png"
+              alt=""
+              textEl={
+                <>
+                  <h2>До 12 апреля</h2>
+                  <p>Мы снизили цены на детскую продукцию до 55%</p>
+                  <a href="#">
+                    Перейти в&#160;<strong>Детские товары</strong>{" "}
+                    <img src="img/arrow-right.svg" alt="" />
+                  </a>
+                </>
+              }
+            />
+            <CarouselItem
+              img="img/banner-1.png"
+              alt=""
+              textEl={
+                <>
+                  <h2>До 12 апреля</h2>
+                  <p>Мы снизили цены на детскую продукцию до 55%</p>
+                  <a href="#">
+                    Перейти в&#160;<strong>Детские товары</strong>{" "}
+                    <img src="img/arrow-right.svg" alt="" />
+                  </a>
+                </>
+              }
+            />
+            <CarouselItem
+              img="img/banner-1.png"
+              alt=""
+              textEl={
+                <>
+                  <h2>До 12 апреля</h2>
+                  <p>Мы снизили цены на детскую продукцию до 55%</p>
+                  <a href="#">
+                    Перейти в&#160;<strong>Детские товары</strong>{" "}
+                    <img src="img/arrow-right.svg" alt="" />
+                  </a>
+                </>
+              }
+            />
+            <CarouselItem
+              img="img/banner-1.png"
+              alt=""
+              textEl={
+                <>
+                  <h2>До 12 апреля</h2>
+                  <p>Мы снизили цены на детскую продукцию до 55%</p>
+                  <a href="#">
+                    Перейти в&#160;<strong>Детские товары</strong>{" "}
+                    <img src="img/arrow-right.svg" alt="" />
+                  </a>
+                </>
+              }
+            />
+            <CarouselItem
+              img="img/banner-1.png"
+              alt=""
+              textEl={
+                <>
+                  <h2>До 12 апреля</h2>
+                  <p>Мы снизили цены на детскую продукцию до 55%</p>
+                  <a href="#">
+                    Перейти в&#160;<strong>Детские товары</strong>{" "}
+                    <img src="img/arrow-right.svg" alt="" />
+                  </a>
+                </>
+              }
+            />
+          </Slider>
+        </div>
+        <div className="thumbs">
+          <Slider
+            asNavFor={nav1}
+            ref={(slider) => (slider2 = slider)}
+            {...settings_thumbs}
+          >
+            <div className='thumbsBannerItem'><img src='img/banner-1.png'/></div>
+            <div className='thumbsBannerItem'><img src='img/banner-1.png'/></div>
+            <div className='thumbsBannerItem'><img src='img/banner-1.png'/></div>
+            <div className='thumbsBannerItem'><img src='img/banner-1.png'/></div>
+            <div className='thumbsBannerItem'><img src='img/banner-1.png'/></div>
+            <div className='thumbsBannerItem'><img src='img/banner-1.png'/></div>
+            <div className='thumbsBannerItem'><img src='img/banner-1.png'/></div>
+          </Slider>
+        </div>
       </div>
     </>
   );

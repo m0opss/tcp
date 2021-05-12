@@ -1,6 +1,8 @@
 @import vars
 @import fonts
 @import libs
+@import "~slick-carousel/slick/slick.css"
+@import "~slick-carousel/slick/slick-theme.css"
 
 *,
 ::after,
@@ -345,26 +347,61 @@ a:hover
 	margin: auto
 	// position: relative
 
-.owl-carousel .owl-stage-outer
-	z-index: -1
-.owl-theme .owl-nav.disabled+.owl-dots
-	text-align: right
-	margin-top: -30px !important
-	margin-right: 60px
-	z-index: 16
+.mainSlider .slick-arrow
+	display: none !important
 
-.owl-theme .owl-dots .owl-dot
-	width: 8px !important
-	height: 8px !important
-	margin:  0 5px
-.owl-theme .owl-dots .owl-dot span
-	background: #A5E1FA !important
-	border-radius: 3px !important
-	width: 8px !important
-	height: 8px !important
-	margin: 0 !important
-.owl-theme .owl-dots .owl-dot.active span
-	background: #73C8EB !important
+.mainSlider .slick-dots
+	bottom: 8px
+	left: 130px
+	display: flex
+	align-items: center
+	justify-content: center
+.mainSlider .slick-dots li
+	list-style: none
+.mainSlider .slick-dots li,
+.mainSlider .slick-dots button,
+.mainSlider .slick-dots button:before
+	width: 8px
+	height: 8px
+
+.mainSlider .slick-dots button:before
+	font-size: 0
+	border-radius: 3px
+	opacity: 1
+	background: #73C8EB
+.mainSlider .slick-dots .slick-active button:before
+	background: #A5E1FA
+
+.thumbs
+	background: #fff
+	height: 120px
+	border-radius: 0 0 14px 14px
+.thumbs .slick-arrow
+	// position: relative
+
+		
+.thumbs .slick-slider
+	height: 100%
+	padding: 20px	45px
+	display: flex
+	align-items: center
+.thumbs .slick-slider .slick-slide > div
+	display: flex
+	align-items: center
+
+.thumbs .thumbsBannerItem
+	background: linear-gradient(256.65deg, #C3EBFF 6.26%, rgba(130, 210, 245, 0.2) 52.65%)
+	border-radius: 10px
+	width: 80px !important
+	height: 80px
+	position: relative
+	overflow: hidden
+.thumbs .thumbsBannerItem img
+	position: absolute
+	top: 8px
+	right: 11px
+	padding: 7px
+	height: 100%
 
 @media (max-width: 1200px)
 	.container
@@ -381,8 +418,3 @@ a:hover
 @media (max-width: 768px)
 	.container
 		max-width: 540px
-
-@media (max-width: 576px)
-	.owl-theme .owl-nav.disabled+.owl-dots
-		margin-top: -29px!important
-		margin-right: 15px
