@@ -13,7 +13,6 @@ const NavMore = ({}) => (
       <li>
         <A href="/comparison">
           <img src="img/compare-scales.svg" alt="" />
-          <span>1</span>
         </A>
       </li>
       <li>
