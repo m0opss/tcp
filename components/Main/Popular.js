@@ -19,9 +19,9 @@ const ProductItem = ({
     <h3 className={styles.productItemTitle}>{name}</h3>
     <div className={styles.productItemRate}>
       <div className={styles.productItemRateStars}>
-        <span class={styles.productItemRateStarsActive}></span>
-        <span class={styles.productItemRateStarsActive}></span>
-        <span class={styles.productItemRateStarsActive}></span>
+        <span className={styles.productItemRateStarsActive}></span>
+        <span className={styles.productItemRateStarsActive}></span>
+        <span className={styles.productItemRateStarsActive}></span>
         <span></span>
         <span></span>
       </div>

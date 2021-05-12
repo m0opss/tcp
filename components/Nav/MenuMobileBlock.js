@@ -82,7 +82,7 @@ const MenuMobileBlock = () => (
       <div className={`${styles.menuMobileBlockContentMenu}`}>
         <ul>
           {menuContent.map((i) => (
-            <li>
+            <li key={i.title}>
               <A href={i.link} className={`${styles.menuMobileBlockMenuLink}`}>
                 <img src={i.img} />
                 <div className="">

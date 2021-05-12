@@ -48,7 +48,7 @@ const MainFooter = () => {
                 "Цены и комиссии": "/price",
               }}
             />
-            <div className={styles.footerItem} style={{ paddingLeft: "130px" }}>
+            <div className={styles.footerItem}>
               <h3>Язык сайта</h3>
               <select name="" id="">
                 <option value="rus">Русский</option>

@@ -7,16 +7,19 @@ const NavMore = ({}) => (
       <li>
         <A href="/favorites">
           <img src="img/bookmark.svg" alt="" />
+          <span>1</span>
         </A>
       </li>
       <li>
         <A href="/comparison">
           <img src="img/compare-scales.svg" alt="" />
+          <span>1</span>
         </A>
       </li>
       <li>
         <A href="/cart">
           <img src="img/cart.svg" alt="" />
+          <span>1</span>
         </A>
       </li>
     </ul>
