@@ -105,7 +105,7 @@
   position: absolute
   visibility: hidden
   padding: 30px
-  width: 1170px
+  width: calc(100% - 20px)
   height: 572px
   top: 62px
   right: auto
@@ -139,7 +139,7 @@
       padding-left: 0px
       margin-bottom: 0px
       li
-        width: 327px
+        width: 323px
         height: 22px
         margin-bottom: 7px
         display: flex
@@ -151,23 +151,25 @@
         line-height: 150%
         border-radius: 5px
         padding-left: 5px
-        position: relative
+        justify-content: space-between
         a
           color: #000000
           text-decoration: none
           margin-left: 12px
           margin-bottom: 1px
         .navCategoriesBlockListArrow
-          position: absolute
-          right: 2px
+          // position: absolute
+          // right: 2px
       .li_active
         background: #ECF0F4
         height: 28px
         .navCategoriesBlockSubmenu
           display: flex
           position: absolute
-          top: -32px
-          left: 453px
+          top: 28px
+          width: 665px
+          right: 25px
+          justify-content: space-between
           &>li
             font-family: PT Sans
             font-style: normal
@@ -182,11 +184,13 @@
             display: flex
             flex-direction: column
             width: auto
-            margin-right: 98px
-            max-width: 250px
-            &:nth-child(2)
-              max-width: 150px
-              margin-right: 70px
+            padding: 0 6px
+            // margin-right: 70px
+            // max-width: 150px
+            align-items: flex-end
+            // &:nth-child(1)
+            //   max-width: 250px
+            //   // margin-right: 98px
             .navCategoriesBlockSubmenuBlock
               font-family: PT Sans
               font-style: normal
@@ -199,7 +203,7 @@
               li
                 margin-bottom: 10px
                 height: 21px
-                width: 250px
+                width: 100%
                 &:first-child
                   margin-top: 16px
               ul,li
@@ -295,34 +299,27 @@
 
 @media (max-width: 1200px)
   #nav
+    .navCategoriesBlockList
+      & > ul > li
+        width: 230px
+    .li_active .navCategoriesBlockSubmenu
+      width: 600px
+      right: 10px
     .navCategories
       p
         font-size: 18px
-      img
-        max-height: 15px
-        margin-top: 10px
-        margin-right: 9px
     .navSearch
-      input
-        width: 530px
-  .navCategoriesBlock
-    width: 992px
-    left: -15px
-    .navCategoriesBlockPopularCategories
-      margin-left: 50px
+      width: 525px
 
-@media (max-width: 992px)
+@media (max-width: 991px)
   #nav
     .navCategoriesBlock
-      background: #f9f9f9
-      box-shadow: 0px 5px 5px rgba(215, 225, 235, 0.1), 0px 10px 15px rgba(215, 225, 235, 0.1), 0px 15px 20px rgba(215, 225, 235, 0.2), 0px 20px 25px rgba(215, 225, 235, 0.25)
-      border-radius: 15px
-      width: 728px
-      padding: 60px 100px
-      .navCategoriesBlockMobile
-        display: block
-      .navCategoriesBlockList, .navCategoriesBlockPopularCategories
-        display: none
+      height: 625px
+    .li_active .navCategoriesBlockSubmenu
+      width: 395px
+      .navCategoriesBlockSubmenuBlockWrapper .navCategoriesBlockSubmenuBlock li
+        max-width: 130px
+        height: auto
     .navCategories
       display: flex
       width: 15%
@@ -342,21 +339,21 @@
         .navCategoriesButtonMore
           display: block
     .navSearch
-      input
-        width: 385px
+      width: 380px
+
     .navMore
       ul
         li
           margin-left: 20px
 
-@media (max-width: 768px)
+@media (max-width: 767px)
   #nav
-    .navCategoriesBlock
-      padding: 15px
-      left: -10px
-      right: -10px
-      width: auto
-      border-radius: 0px
+    // .navCategoriesBlock
+    //   padding: 15px
+    //   left: -10px
+    //   right: -10px
+    //   width: auto
+    //   border-radius: 0px
     .navCategories
       width: 19%
     .navSearch

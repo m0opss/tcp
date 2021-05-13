@@ -4,8 +4,10 @@ import styles from "../../styles/Main/nav.module.sass";
 const NavCategoriesBlockListItem = ({ img, title, link, i }) => {
   return (
     <li className={i == 1 ? styles.li_active : ""}>
-      <img src={img} alt="" />
-      <a href={link}>{title}</a>
+      <div className="">
+        <img src={img} alt="" />
+        <a href={link}>{title}</a>
+      </div>
       <img
         src="img/arrowRight.svg"
         className={`${styles.navCategoriesBlockListArrow}`}

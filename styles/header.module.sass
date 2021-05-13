@@ -57,13 +57,6 @@
 				strong
 					color: #3CC8B4
 
-	// .headerCurrency2
-	// 	width: 41%
-	// 	.flex
-	// 		justify-content: left
-	// 	p
-	// 		text-align: left
-	// 		margin-left: 25px
 	.headerMenu
 		color: #F6F7FB
 		padding-left: 21%
@@ -101,22 +94,33 @@
 					text-align: center
 					color: #323C46
 
-@media (max-width: 992px)
+@media (max-width: 1200px)
+	.headerLogo
+		width: auto
+	.headerCurrency .flex span
+		white-space: nowrap
+@media (max-width: 991px)
 	#header
-		.headerCurrency2
-			width: 29%
-		.headerMenu
-			ul
-				margin: 5px 0px
-				li
-					a
-						p
-							display: none
-					.headerMenuLogIn
-						p
-							display: block
 
-@media (max-width: 768px)
+		.headerMenu
+			padding-left: 11%
+		.headerCurrencies
+			padding-left: 30px
+			.headerCurrency3
+				display: none
+			// width: 29%
+		// .headerMenu
+		// 	ul
+		// 		margin: 5px 0px
+		// 		li
+		// 			a
+		// 				p
+		// 					display: none
+		// 			.headerMenuLogIn
+		// 				p
+		// 					display: block
+
+@media (max-width: 767px)
 	#header
 		.headerLogo
 			img

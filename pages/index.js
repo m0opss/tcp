@@ -17,7 +17,7 @@ const Index = ({ items }) => {
       <Nav />
       <div id={styles.main}>
         <div className="container">
-          <div className="flex">
+          <div className={`${styles.flex} flex`}>
             <MainLinks />
             <MainBanner />
             <MainAuthForm />

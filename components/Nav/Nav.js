@@ -59,7 +59,7 @@ const Nav = ({}) => {
     <>
       <nav id={`${styles.nav}`}>
         <div className="container" style={{ position: "relative" }}>
-          <MenuMobileBlock />
+          <MenuMobileBlock /> 
           <NavCategoriesBlock />
           <div className={`${styles.navMainBlock}`}>
             {menuIsOpen ? (

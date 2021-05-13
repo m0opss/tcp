@@ -40,7 +40,7 @@
   width: 570px
   margin: 0px 30px
 #main .mainBanner .mainBannerItem
-  width: 570px
+  width: 100%
   height: 290px
   background: linear-gradient(256.65deg, #C3EBFF 6.26%, rgba(130, 210, 245, 0.2) 52.65%)
   box-shadow: 0px 20px 25px rgba(215, 225, 235, 0.15), 0px 15px 20px rgba(215, 225, 235, 0.1), 0px 10px 15px rgba(215, 225, 235, 0.07), 0px 5px 5px rgba(215, 225, 235, 0.05)
@@ -130,11 +130,6 @@
       line-height: 150%
       margin-top: 5px
 
-#main .mainBanner .thumb
-  background: white
-  width: 100%
-  height: 120px
-
 #main .mainGraphics
   margin-top: 30px
   display: flex
@@ -181,58 +176,107 @@
 
 @media (max-width: 1200px)
   #main .mainBanner
-    width: 608px
-  #main .mainBanner .mainBannerItem
-    width: 608px
-  #main .mainBanner .mainBannerItem .mainBannerItemTxt
-    width: 230px
+    width: 458px
+    height: 333px
+  // #main .mainBanner .mainBannerItem
+  //   width: 230px
 
-@media (max-width: 992px)
+@media (max-width: 991px)
+  #main .flex
+    flex-direction: column-reverse
+  #main .mainAuthForm
+    width: 100%
+    height: 75px
+    padding: 20px
+    margin-bottom: 30px
+    .mainAuthFormContainer
+      flex-direction: row
+      width: 100%
+      height: 100%
+      justify-content: flex-start
+      & > img
+        width: 35px
+        height: 35px
+        margin-bottom: 0
+      p
+        margin-bottom: 0
+        margin-left: 9px
+        margin-right: 195px
+        width: 131px
+        text-align: start
+      a
+        width: 135px
+        margin-top: 0
+        margin-left: 10px
+
+  #main .mainBanner
+    width: 100%
+    margin: 0
+    .mainBannerItem
+      height: 333px
+      border-radius: 14px
+      .mainBannerItemImg img
+        width: unset
+        left: 0
+      .mainBannerItemTxt
+        right: 70px
+        top: 80px
+        p
+          margin-bottom: 17px
   #main .mainLinks
-    display: none
-  #main .mainBanner
-    width: 690px
-  #main .mainBanner .mainBannerItem
-    width: 690px
-  #main .mainBanner .mainBannerItem .mainBannerItemTxt
-    width: 303px
-  #main .mainBanner .mainGraphics .mainGraphicsItem
-    width: 330px
+    width: 100%
+    height: unset
+    margin-top: 15px
+    ul
+      width: 100%
+      justify-content: space-between
+      flex-wrap: wrap
+      display: flex
+      
+    .mainLinksItem
+      width: 340px
+      margin-top: 15px
+      margin-bottom: 0
+  #main .mainGraphics .mainGraphicsItem 
+    &:nth-child(2)
+      margin: 0 15px
+  // #main .mainBanner .mainGraphics .mainGraphicsItem
+  //   width: 330px
 
-@media (max-width: 768px)
-  #main .mainBanner
-    width: 510px
-  #main .mainBanner .mainBannerItem
-    width: 510px
-    height: 220px
-  #main .mainBanner .mainBannerItem .mainBannerItemImg img
-    max-width: 200px
-    margin-top: 19px
-  #main .mainBanner .mainBannerItem .mainBannerItemTxt
-    width: 243px
-  #main .mainBanner .mainBannerItem .mainBannerItemTxt h2
-    font-size: 24px
-    margin-top: 35px
-    margin-bottom: 0px
-  #main .mainBanner .mainBannerItem .mainBannerItemTxt p
-    font-size: 12px
-    text-align: right
-    width: 115px
-    margin-bottom: 8px
-  #main .mainBanner .mainGraphics .mainGraphicsItem
-    width: 240px
+// @media (max-width: 767px)
+//   #main .mainBanner
+//     width: 510px
+//   #main .mainBanner .mainBannerItem
+//     width: 510px
+//     height: 220px
+//   #main .mainBanner .mainBannerItem .mainBannerItemImg img
+//     max-width: 200px
+//     margin-top: 19px
+//   #main .mainBanner .mainBannerItem .mainBannerItemTxt
+//     width: 243px
+//   #main .mainBanner .mainBannerItem .mainBannerItemTxt h2
+//     font-size: 24px
+//     margin-top: 35px
+//     margin-bottom: 0px
+//   #main .mainBanner .mainBannerItem .mainBannerItemTxt p
+//     font-size: 12px
+//     text-align: right
+//     width: 115px
+//     margin-bottom: 8px
+//   #main .mainBanner .mainGraphics .mainGraphicsItem
+//     width: 240px
 
-@media (max-width: 576px)
-  #main .mainBanner
-    width: 355px
-  #main .mainBanner .mainBannerItem
-    width: 355px
-    height: 140px
-    position: relative
-  #main .mainBanner .mainGraphics
-    margin-top: 55px
-  #main .mainBanner .mainGraphics .mainGraphicsItem
-    width: 355px
-  #main .mainBanner .mainGraphics .mainGraphicsSoldInAMonth
-    margin-right: 0px
-    margin-bottom: 25px
+// @media (max-width: 576px)
+//   #main .mainBanner
+//     width: 355px
+//   #main .mainBanner .mainBannerItem
+//     width: 355px
+//     height: 140px
+//     position: relative
+//   #main .mainBanner .mainGraphics
+//     margin-top: 55px
+//   #main .mainBanner .mainGraphics .mainGraphicsItem
+//     width: 355px
+//   #main .mainBanner .mainGraphics .mainGraphicsSoldInAMonth
+//     margin-right: 0px
+//     margin-bottom: 25px
