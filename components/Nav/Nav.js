@@ -11,27 +11,48 @@ const Nav = ({}) => {
   const [menuIsOpen, setMenuOpen] = useState(false);
   const [catIsOpen, setCatOpen] = useState(false);
 
-  const onClickMenuMobile = (e) => {
-    // e.preventDefault();
-    document
-      .getElementsByClassName("menuMobile")[0]
-      .classList.toggle("menuMobile_active");
-    document
-      .getElementsByClassName("menuMobileBlock")[0]
-      .classList.toggle("menuMobileBlock_active");
+  const onClickMenuMobile = (flag) => {
+    if (flag) {
+      document
+        .getElementsByClassName("menuMobile")[0]
+        .classList.toggle("menuMobile_active");
+      document
+        .getElementsByClassName("menuMobileBlock")[0]
+        .classList.toggle("menuMobileBlock_active");
+    } else {
+      document
+        .getElementsByClassName("menuMobile")[0]
+        .classList.remove("menuMobile_active");
+      document
+        .getElementsByClassName("menuMobileBlock")[0]
+        .classList.remove("menuMobileBlock_active");
+    }
   };
 
-  const onClickCategoriesButton = (e) => {
+  const onClickCategoriesButton = (flag) => {
+    if (flag) {
+      document
+        .getElementsByClassName("navCategoriesBlock")[0]
+        .classList.toggle("navCategoriesBlock_active");
+    } else {
+      document
+        .getElementsByClassName("navCategoriesBlock")[0]
+        .classList.remove("navCategoriesBlock_active");
+    }
+  };
+
+  const handleClickCategory = () => {
+    setMenuOpen(false);
     setCatOpen((catIsOpen) => !catIsOpen);
-    e.preventDefault();
-    document
-      .getElementsByClassName("navCategoriesBlock")[0]
-      .classList.toggle("navCategoriesBlock_active");
+    onClickCategoriesButton(true);
+    onClickMenuMobile(false);
   };
 
-  const handleClickMenu = (target) => {
+  const handleClickMenu = () => {
+    setCatOpen(false);
     setMenuOpen((menuIsOpen) => !menuIsOpen);
-    onClickMenuMobile(target);
+    onClickCategoriesButton(false);
+    onClickMenuMobile(true);
   };
 
   return (
@@ -59,7 +80,7 @@ const Nav = ({}) => {
 
             <div className={`${styles.navCategories}`}>
               <div
-                onClick={onClickCategoriesButton}
+                onClick={handleClickCategory}
                 className={`${styles.navCategoriesContent} navCategoriesButton flex`}
               >
                 {catIsOpen ? (

@@ -376,8 +376,12 @@ a:hover
 	background: #fff
 	height: 120px
 	border-radius: 0 0 14px 14px
-.thumbs .slick-arrow
-	// position: relative
+.thumbs .slick-prev.customArrow
+	left: 17px
+	height: 10px
+.thumbs .slick-next.customArrow
+	right: 19px
+	height: 10px
 
 		
 .thumbs .slick-slider
@@ -385,9 +389,13 @@ a:hover
 	padding: 20px	45px
 	display: flex
 	align-items: center
-.thumbs .slick-slider .slick-slide > div
-	display: flex
-	align-items: center
+.thumbs .slick-slider .slick-track
+	width: 700px !important
+.thumbs .slick-slider .slick-slide 
+	width: 100px !important
+	&> div
+		display: flex
+		align-items: center
 
 .thumbs .thumbsBannerItem
 	background: linear-gradient(256.65deg, #C3EBFF 6.26%, rgba(130, 210, 245, 0.2) 52.65%)

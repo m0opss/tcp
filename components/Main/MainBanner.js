@@ -15,6 +15,29 @@ const CarouselItem = ({ img, alt, textEl }) => (
   </div>
 );
 
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <img
+      className={`${className} customArrow`}
+      style={{ ...style}}
+      onClick={onClick}
+      src='img/slickPrev.svg'
+    />
+  );
+}
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <img
+      className={`${className} customArrow`}
+      style={{ ...style}}
+      onClick={onClick}
+      src='img/slickNext.svg'
+    />
+  );
+}
+
 const MainBanner = ({ children, keywords }) => {
   const settings = {
     dots: true,
@@ -24,11 +47,13 @@ const MainBanner = ({ children, keywords }) => {
     slidesToScroll: 1,
   };
   const settings_thumbs = {
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 5,
     swipeToSlide: true,
-    focusOnSelect: true
+    focusOnSelect: true,
+    prevArrow: <SamplePrevArrow />,
+    nextArrow: <SampleNextArrow />
   };
 
   const [nav1, setNav1] = React.useState(null);
