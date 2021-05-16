@@ -14,6 +14,10 @@
 		padding: 6px 0px
 		width: 20%
 		height: 100%
+		.headerLogoDesc
+			display: block
+		.headerLogoMob
+			display: none
 		img
 			width: 94px
 
@@ -99,9 +103,12 @@
 		width: auto
 	.headerCurrency .flex span
 		white-space: nowrap
+	#header
+		.headerMenu
+			padding-left: 7%
+
 @media (max-width: 991px)
 	#header
-
 		.headerMenu
 			padding-left: 11%
 		.headerCurrencies
@@ -123,11 +130,29 @@
 @media (max-width: 767px)
 	#header
 		.headerLogo
-			img
-				max-height: 36px
+			.headerLogoDesc
+				display: none
+			.headerLogoMob
+				display: block
+				height: 32px
+				width: 32px
+		.headerCurrencies
+			padding-left: 10px
 		.headerCurrency1
-			width: 31%
+			width: 35%
+		.headerCurrency
+			.bitcoinLogo
+				width: 9px
+				height: 14px
+			.flex
+				p
+					display: none
+				span
+					font-size: 10px
+					display: flex
+					flex-direction: column
 		.headerMenu
+			padding-left: 18%
 			ul
 				margin: 11px 0
 				li
@@ -150,26 +175,26 @@
 		padding: 8px 0px
 	#header .headerLogo img
 		width: 68px
-	#header .headerCurrency1
-		width: 27%
-		margin-top: 0px
-		padding: 5px 0px
-	#header .headerCurrency .flex p
-		font-size: 12px
-	#header .headerCurrency p
-		font-size: 11px
-		margin-bottom: 0
-	#header .headerCurrency .flex img
-		max-height: 12px
-		margin-right: 1px
-		margin-top: 2px
-	#header .headerCurrency2
-		width: 25%
-		margin-top: 0px
-		padding: 5px 0px
-	#header .headerCurrency2 p
-		font-size: 11px
-		margin-left: 9px
+	// #header .headerCurrency1
+	// 	width: 27%
+	// 	margin-top: 0px
+	// 	padding: 5px 0px
+	// #header .headerCurrency .flex p
+	// 	font-size: 12px
+	// #header .headerCurrency p
+	// 	font-size: 11px
+	// 	margin-bottom: 0
+	// #header .headerCurrency .flex img
+	// 	max-height: 12px
+	// 	margin-right: 1px
+	// 	margin-top: 2px
+	// #header .headerCurrency2
+	// 	width: 25%
+	// 	margin-top: 0px
+	// 	padding: 5px 0px
+	// #header .headerCurrency2 p
+	// 	font-size: 11px
+	// 	margin-left: 9px
 	#header .headerMenu
 		padding: 0px
 		margin-top: -2px

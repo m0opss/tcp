@@ -82,7 +82,8 @@ const MainHeader = ({}) => {
           <div className={styles.headerWrapper}>
             <div className={styles.headerLogo}>
               <a href="/">
-                <img src="img/logo.svg" alt="" />
+                <img className={styles.headerLogoDesc} src="img/logo.svg" alt="" />
+                <img className={styles.headerLogoMob} src="img/pic.svg" alt="" />
               </a>
             </div>
             <HeaderCurrencies />

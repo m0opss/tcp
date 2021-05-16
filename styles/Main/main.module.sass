@@ -232,23 +232,49 @@
       justify-content: space-between
       flex-wrap: wrap
       display: flex
-      
+
     .mainLinksItem
       width: 340px
       margin-top: 15px
       margin-bottom: 0
-  #main .mainGraphics .mainGraphicsItem 
+  #main .mainGraphics .mainGraphicsItem
     &:nth-child(2)
       margin: 0 15px
   // #main .mainBanner .mainGraphics .mainGraphicsItem
   //   width: 330px
 
-// @media (max-width: 767px)
+@media (max-width: 767px)
+  #main
+    padding-top: 15px
+  #main .mainAuthForm
+    margin-bottom: 15px
+    padding-bottom: 15px
+    height: 100px
+    .mainAuthFormContainer
+      flex-wrap: wrap
+      img
+        height: 24px
+        width: 24px
+        margin-top: 0
+      p
+        width: 80%
+        margin-right: 0
+        font-size: 14px
+        line-height: 150%
+      .mainAuthFormButton
+        width: 120px
+        font-size: 14px
+        line-height: 17px
+        margin-top: 12px
+        margin-bottom: 15px
+  #main .mainBanner
+    height: 170px
+    .mainBannerItem
+      height: 170px
+  #main .mainGraphics 
+    overflow-x: scroll
 //   #main .mainBanner
 //     width: 510px
-//   #main .mainBanner .mainBannerItem
-//     width: 510px
-//     height: 220px
 //   #main .mainBanner .mainBannerItem .mainBannerItemImg img
 //     max-width: 200px
 //     margin-top: 19px
