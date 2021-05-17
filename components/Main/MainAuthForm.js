@@ -5,10 +5,18 @@ const MainAuthForm = ({}) => {
   return (
     <div className={`${styles.mainAuthForm}`}>
       <div className={`${styles.mainAuthFormContainer}`}>
-        <img src="img/AuthFormProfileIcon.svg" alt="" />
-        <p onClick={() => onClickHas()}>Добро пожаловать в TCP Market</p>
-        <A href='/register' className={`${styles.mainAuthFormButton}`}>Регистрация</A>
-        <A href='/login' className={`${styles.mainAuthFormButton}`}>Войти</A>
+        <div className="">
+          <img src="img/AuthFormProfileIcon.svg" alt="" />
+          <p onClick={() => onClickHas()}>Добро пожаловать в TCP Market</p>
+        </div>
+        <div className="">
+          <A href="/register" className={`${styles.mainAuthFormButton}`}>
+            Регистрация
+          </A>
+          <A href="/login" className={`${styles.mainAuthFormButton}`}>
+            Войти
+          </A>
+        </div>
       </div>
     </div>
   );

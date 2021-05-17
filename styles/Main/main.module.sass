@@ -1,5 +1,6 @@
 #main
   padding-top: 55px
+  overflow-x: hidden
 #main .mainLinks
   width: 270px
   height: 410px
@@ -23,6 +24,9 @@
       align-items: center
       img
         margin-left: 20px
+        @media screen and ( max-width: 576px )
+          margin-left: 12px
+
       .mainLinksItemName
         margin-left: 20px
         margin-bottom: 0
@@ -161,6 +165,7 @@
       width: 190px
       height: 35px
       margin: 0 auto
+      margin-top: 10px
       background: #9182F0
       border-radius: 6px
       font-family: Proxima Nova
@@ -194,10 +199,14 @@
       width: 100%
       height: 100%
       justify-content: flex-start
-      & > img
-        width: 35px
-        height: 35px
-        margin-bottom: 0
+      div
+        display: flex
+        align-items: center
+        &:nth-child(1)
+          & > img
+            width: 35px
+            height: 35px
+            margin-bottom: 0
       p
         margin-bottom: 0
         margin-left: 9px
@@ -226,7 +235,7 @@
   #main .mainLinks
     width: 100%
     height: unset
-    margin-top: 15px
+    // margin-top: 15px
     ul
       width: 100%
       justify-content: space-between
@@ -252,12 +261,16 @@
     height: 100px
     .mainAuthFormContainer
       flex-wrap: wrap
-      img
-        height: 24px
-        width: 24px
-        margin-top: 0
+      div
+        width: 100%
+        justify-content: center
+        &:nth-child(1)
+          & > img
+            height: 24px
+            width: 24px
+            margin-top: 0
       p
-        width: 80%
+        width: auto
         margin-right: 0
         font-size: 14px
         line-height: 150%
@@ -271,8 +284,44 @@
     height: 170px
     .mainBannerItem
       height: 170px
-  #main .mainGraphics 
+      .mainBannerItemImg img
+        left: -35px
+        padding: 25px
+        bottom: -25px
+      .mainBannerItemTxt
+        right: 35px
+        top: 15px
+        h2
+          font-size: 24px
+          margin-bottom: 10px
+        p
+          font-size: 14px
+          margin-bottom: 15px
+          width: 152px
+        a
+          font-size: 12px
+          position: relative
+          top: -11px
+          left: 15px
+  #main .mainGraphics
     overflow-x: scroll
+    .mainGraphicsItem
+      min-width: 230px
+      width: auto
+      .mainGraphicsItemTitle
+        margin-bottom: 13px
+      .mainGraphicsItemBtn
+        font-size: 14px
+        line-height: 17px
+
+  #main .mainLinks ul .mainLinksItem
+    width: 49%
+    height: 65px
+    font-size: 14px
+    line-height: 100%
+    img
+      height: 20px
+
 //   #main .mainBanner
 //     width: 510px
 //   #main .mainBanner .mainBannerItem .mainBannerItemImg img
@@ -292,7 +341,14 @@
 //   #main .mainBanner .mainGraphics .mainGraphicsItem
 //     width: 240px
 
-// @media (max-width: 576px)
+@media (max-width: 576px)
+  #main .mainLinks ul .mainLinksItem
+    height: 45px
+    .mainLinksItemLink
+      .mainLinksItemName
+        margin-left: 10px
+        font-size: 14px
+
 //   #main .mainBanner
 //     width: 355px
 //   #main .mainBanner .mainBannerItem

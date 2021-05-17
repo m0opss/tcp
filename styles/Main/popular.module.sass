@@ -151,7 +151,7 @@
           width: 96%
         .productItemTitle
           overflow: hidden
-        .productItemPrice 
+        .productItemPrice
           margin-right: 15px
           p
             font-size: 12px
@@ -174,8 +174,42 @@
   //     padding-left: 20px
 
 @media (max-width: 767px)
+  #popular .productItems .productItem
+    width: 48%
+    margin: 1%
+  #popular
+    margin-top: 15px
+    margin-bottom: 15px
 
-  .productItems .productItem
+@media (max-width: 444px)
+  #popular
+    h2, h2 a span
+      font-size: 18px
+  #popular .productItems .productItem
+    height: 254px
+    padding: 10px
+    .productItemTitle
+      margin-top: 15px
+      font-size: 14px
+      line-height: 115%
+    .productItemImgContainer
+      width: 90%
+    .productItemFavoritesIcon,
+    .productItemCompareIcon,
+    .productItemCartIcon
+      right: 10px
+      height: 15px
+      width: 15px
+    .productItemCompareIcon
+      top: 50px
+    .productItemCartIcon
+      bottom: 25px
+    .productItemPrice
+      margin-top: 5px
+      p
+        font-size: 10px
+        line-height: 130%
+        margin-bottom: 3px
 //     text-align: center
 //     width: 213px
 //     height: 350px

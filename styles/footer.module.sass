@@ -1,3 +1,5 @@
+#footerMobile
+	display: none
 #footer
 	background: #323C46
 	color: #f9f9f9
@@ -58,3 +60,62 @@
 	#footer
 		.footerItem
 			width: 175px
+
+@media (max-width: 767px)
+	#footer
+		display: none
+	#footerMobile
+		position: sticky
+		bottom: 0
+		background: #F9F9F9
+		box-shadow: 0px -5px 21px rgba(31, 40, 56, 0.04)
+		display: block
+		width: 100%
+		height: 58px
+		ul
+			display: flex
+			align-items: center
+			justify-content: space-between
+			height: 100%
+			li
+				list-style: none
+				padding: 11px
+				width: 20%
+				height: 100%
+				a
+					display: flex
+					flex-direction: column
+					align-items: center
+					justify-content: center
+					position: relative
+					color: #28323C
+					height: 100%
+					width: 100%
+					p
+						font-size: 10px
+						margin-bottom: 0
+					span
+						width: 11px
+						height: 11px
+						border-radius: 50%
+						display: flex
+						align-items: center
+						justify-content: center
+						top: -1px
+						right: 23px
+						background: #AAA0FA
+						position: absolute
+						font-family: PT Sans
+						font-style: normal
+						font-weight: normal
+						font-size: 8px
+						line-height: 100%
+						text-align: center
+						color: #FFFFFF
+
+@media (max-width: 475px)
+	#footerMobile ul li a span 
+		right: 16px
+@media (max-width: 399px)
+	#footerMobile ul li a span 
+		right: 8px

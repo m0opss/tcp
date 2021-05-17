@@ -76,11 +76,20 @@ const menuContent = [
   },
 ];
 
-const MenuMobileBlock = () => (
+const MenuMobileBlock = ({ handleClickMenu }) => (
   <div className={`${styles.menuMobileBlock} menuMobileBlock`}>
     <div className={`${styles.menuMobileBlockContent}`}>
       <div className={`${styles.menuMobileBlockContentMenu}`}>
         <ul>
+          <li className="">
+            <img
+              src="img/menu-mobile-active.svg"
+              width="18"
+              height="18"
+              className={`${styles.menuMobileClose} ${styles.active}`}
+              onClick={handleClickMenu}
+            />
+          </li>
           {menuContent.map((i) => (
             <li key={i.title}>
               <A href={i.link} className={`${styles.menuMobileBlockMenuLink}`}>

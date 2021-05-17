@@ -6,7 +6,8 @@
   width: 100%
   display: flex
   align-items: center
-
+  .navMobMoreMenu 
+    display: none
 .navMainBlock
   width: 100%
   display: flex
@@ -116,6 +117,8 @@
   border-radius: 14px
   transition: all 0.1s
   z-index: 12
+  .menuMobileClose
+    display: none
   .navCategoriesBlockMobile
     display: none
     text-align: center
@@ -134,6 +137,8 @@
         color: #28323C
         width: 140px
   .navCategoriesBlockList
+    .navCategoriesBlockTopRow
+      display: none
     &>ul
       list-style: none
       padding-left: 0px
@@ -260,6 +265,8 @@
   border-radius: 15px
   z-index: 12
   animation: menuBlockActivate .5s backwards
+  .menuMobileClose
+    display: none
   .menuMobileBlockContentMenu ul
     list-style: none
     padding-left: 13px
@@ -350,50 +357,123 @@
 
 @media (max-width: 767px)
   #nav
-    // .navCategoriesBlock
-    //   padding: 15px
-    //   left: -10px
-    //   right: -10px
-    //   width: auto
-    //   border-radius: 0px
-    margin-bottom: 0
+    .navMobMoreMenu
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 27%
+      margin-left: auto
+    .navMainBlock .menuMobile
+      margin-left: 0
     .navCategories
-      width: 19%
-    .navSearch
+      margin-left: 20px
+    .navCategories .navCategoriesContent
+      flex-wrap: nowrap
+      img
+        width: 18px
+        height: 18px
+      p
+        font-weight: bold
+        font-size: 12px
+        line-height: 150%
+        color: #323C46
+    .navSearch, .navMore
+      display: none
+    .menuMobileBlock, .navCategoriesBlock
+      width: 100%
+      height: calc(100vh - 58px)
+      top: -68px
+      padding: 10px
+      border-radius: 0
+      overflow-y: scroll
+      left: 0
+      .menuMobileClose
+        display: block
+      // position: sticky
+    .menuMobileBlock .menuMobileBlockContentMenu
       position: relative
-      input
-        width: 391px
-      button
-        position: absolute
-        left: auto
-        right: 0
-    .navMore
-      display: none
+      margin-right: 10px
+      ul
+        padding-left: 0
+        a
+          margin-bottom: 0
+        li
+          padding-bottom: 10px
+          padding-top: 10px
+          border-bottom: 1px solid #D7E1EB
+          &:first-child
+            display: flex
+            justify-content: flex-end
+          p
+            line-height: 150%
+    .navCategoriesBlock
+      .navCategoriesBlockList
+        width: 100%
+        ul li
+          width: 100%
+        li
+          padding-bottom: 10px
+          padding-top: 10px
+          border-bottom: 1px solid #D7E1EB
+          margin-bottom: 0
+          height: auto
+        .navCategoriesBlockTopRow
+          display: flex
+          justify-content: space-between
+          & > div
+            display: flex
+            align-items: center
+            img
+              margin-left: 20px
+            &:first-child
+              img
+                margin-left: 0
+                margin-right: 15px
+          p
+            margin-bottom: 0
+            font-weight: bold
 
-@media (max-width: 576px)
-  #nav
-    .navCategories
-      .navCategoriesContent
-        .navCategoriesButtonMore
-          display: none
-    .navSearch
-      display: none
-    .navMenu
-      display: block
-  #nav
-    height: 36px
-  #nav .navCategories
-    padding: 5px 0px
-  #nav .navCategories .navCategoriesContent
-    display: contents
-  #nav .navCategories .navCategoriesContent .navCategoriesButtonMobile
-    display: block
-  #nav .navCategories .menuMobile
-    margin-right: 17px
-    margin-right: 13px
-    margin-top: 5px
-    min-height: 18px
-  #nav .navCategories img
-    max-height: 13px
-    margin-top: 7px
-    margin-right: 9px
+//     // .navCategoriesBlock
+//     //   padding: 15px
+//     //   left: -10px
+//     //   right: -10px
+//     //   width: auto
+//     //   border-radius: 0px
+//     margin-bottom: 0
+//       width: 19%
+//     .navSearch
+//       position: relative
+//       input
+//         width: 391px
+//       button
+//         position: absolute
+//         left: auto
+//         right: 0
+
+// @media (max-width: 576px)
+//   #nav
+//     .navCategories
+//       .navCategoriesContent
+//         .navCategoriesButtonMore
+//           display: none
+//     .navSearch
+//       display: none
+//     .navMenu
+//       display: block
+//   #nav
+//     height: 36px
+//   #nav .navCategories
+//     padding: 5px 0px
+//   #nav .navCategories .navCategoriesContent
+//     display: contents
+//   #nav .navCategories .navCategoriesContent .navCategoriesButtonMobile
+//     display: block
+//   #nav .navCategories .menuMobile
+//     margin-right: 17px
+//     margin-right: 13px
+//     margin-top: 5px
+//     min-height: 18px
+//   #nav .navCategories img
+//     max-height: 13px
+//     margin-top: 7px
+//     margin-right: 9px

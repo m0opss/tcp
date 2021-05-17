@@ -14,7 +14,7 @@ const HeaderCurrenciesItem = ({ className, title, value, percent }) => (
       <p>{title}</p>
       <span>
         <img src="img/topArrowHeader.svg" />
-        {value.toFixed(4)}{" "}
+        {value.toFixed(3)}{" "}
         <strong>{percent > 0 ? `+ ${percent}` : percent}%</strong>
       </span>
     </div>
@@ -61,14 +61,23 @@ const AccountMenu = ({ isAuth, setIsAuth }) => (
         </li>
       </ul>
     ) : (
-      <ul className="flex">
-        <li onClick={() => setIsAuth(isAuth => !isAuth)}>
-          <A className={styles.headerMenuLogIn} href="#">
-            <img src="img/log-in.svg" alt="" />
-            <p>Войти</p>
-          </A>
-        </li>
-      </ul>
+      <>
+        <ul className={`${styles.flex} flex`}>
+          <li onClick={() => setIsAuth((isAuth) => !isAuth)}>
+            <A className={styles.headerMenuLogIn} href="#">
+              <img src="img/log-in.svg" alt="" />
+              <p>Войти</p>
+            </A>
+          </li>
+        </ul>
+        <div className={`${styles.mobHeaderMenu}`}>
+          <div className="">
+            <img className="" src="img/coloc.svg" />
+            <span>1</span>
+          </div>
+          <div className={`${styles.profileImg}`}></div>
+        </div>
+      </>
     )}
   </div>
 );
@@ -81,9 +90,24 @@ const MainHeader = ({}) => {
         <div className={`${styles.container} container`}>
           <div className={styles.headerWrapper}>
             <div className={styles.headerLogo}>
-              <a href="/">
-                <img className={styles.headerLogoDesc} src="img/logo.svg" alt="" />
-                <img className={styles.headerLogoMob} src="img/pic.svg" alt="" />
+              <a
+                href="/"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  height: "100%",
+                }}
+              >
+                <img
+                  className={styles.headerLogoDesc}
+                  src="img/logo.svg"
+                  alt=""
+                />
+                <img
+                  className={styles.headerLogoMob}
+                  src="img/pic.svg"
+                  alt=""
+                />
               </a>
             </div>
             <HeaderCurrencies />

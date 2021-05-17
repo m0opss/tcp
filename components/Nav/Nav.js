@@ -59,8 +59,8 @@ const Nav = ({}) => {
     <>
       <nav id={`${styles.nav}`}>
         <div className="container" style={{ position: "relative" }}>
-          <MenuMobileBlock /> 
-          <NavCategoriesBlock />
+          <MenuMobileBlock handleClickMenu={handleClickMenu} />
+          <NavCategoriesBlock handleClickCategory={handleClickCategory} />
           <div className={`${styles.navMainBlock}`}>
             {menuIsOpen ? (
               <img
@@ -109,6 +109,11 @@ const Nav = ({}) => {
             </div>
             <NavSearch />
             <NavMore />
+            <div className={`${styles.navMobMoreMenu}`}>
+              <img src="img/QRCodeMobNav.svg" />
+              <img src="img/SearchMobNav.svg" />
+              <img src="img/CompareMobNav.svg" />
+            </div>
           </div>
         </div>
       </nav>

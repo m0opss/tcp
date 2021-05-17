@@ -1,4 +1,5 @@
 import styles from "../styles/footer.module.sass";
+import A from "./A";
 
 const FooterItem = ({ title, content }) => (
   <div className={styles.footerItem}>
@@ -86,6 +87,42 @@ const MainFooter = () => {
             <p>Все права защищены.</p>
           </div>
         </div>
+      </footer>
+      <footer id={`${styles.footerMobile}`}>
+        <ul className="container">
+          <li>
+            <A href="">
+              <img src="/img/mobileBtmShopIcon.svg" />
+              <p>Магазин</p>
+            </A>
+          </li>
+          <li>
+            <A href="">
+              <img src="/img/mobileBtmFavoritesIcon.svg" />
+              <p>Избранное</p>
+            </A>
+          </li>
+          <li>
+            <A href="">
+              <img src="/img/mobileBtmCartIcon.svg" />
+              <span>1</span>
+              <p>Корзина</p>
+            </A>
+          </li>
+          <li>
+            <A href="">
+              <img src="/img/mobileBtmMsgIcon.svg" />
+              <span>1</span>
+              <p>Сообщения</p>
+            </A>
+          </li>
+          <li>
+            <A href="">
+              <img src="/img/mobileBtmBagIcon.svg" />
+              <p>Кошелек</p>
+            </A>
+          </li>
+        </ul>
       </footer>
     </>
   );

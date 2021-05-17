@@ -16,7 +16,7 @@ const Index = ({ items }) => {
       <MainHeader />
       <Nav />
       <div id={styles.main}>
-        <div className="container">
+        <div className={`${styles.container} container`}>
           <div className={`${styles.flex} flex`}>
             <MainLinks />
             <MainBanner />
